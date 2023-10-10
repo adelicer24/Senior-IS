@@ -2,18 +2,70 @@
     display: flex;
     overflow: hidden;
     position: relative;
-    height: 75px;
-    background-color: #dc143c;
-    border-bottom: 2px;
+    height: 70px;
+    background-color: crimson;
+    border-bottom: 3px;
     border-bottom-style: solid;
     border-color: black;
 }
 
+.logo {
+    margin-top: 0px;
+}
+
+.header a {
+    position: relative;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+.header a:hover {
+    color: crimson;
+    cursor: pointer;
+}
+
+.header a.active {
+    background-color: white;
+    color: black;
+    cursor: not-allowed;
+}
+
 .h1 {
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
+    margin-left: 0px;
+    margin-top: 15px;
     font-size: 35px;
     color: black;
+    padding-left: 2px;
+}
+
+.buttons {
+    position: relative;
+    float: right;
+    margin-top: 25px;
+    margin-right: 0px;
+    margin-left: auto;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: crimson;
+    color: black;
+    font-size: 15px;
+    height: 75px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border-top: 3px;
+    border-top-style: solid;
+    border-color: black;
 }
