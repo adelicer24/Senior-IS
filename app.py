@@ -17,3 +17,7 @@ def statistics():
 @app.route("/comparison")
 def comparison():
     return render_template("comparison.html")
+
+@app.route("/glossary")
+def glossary():
+    return render_template("glossary.html")
