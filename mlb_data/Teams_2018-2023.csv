@@ -65,12 +65,12 @@ Year,Team,Team Abbreviation,Wins,Losses,Winning Percentage,Division,League,Seaso
 2021,Houston Astros,HOU,95,67,0.586,West Division,American League,World Series Runner Up,171018567
 2022,Houston Astros,HOU,106,56,0.654,West Division,American League,World Series Champion,163939599
 2023,Houston Astros,HOU,90,72,0.556,West Division,American League,Postseason Contender,180888333
-2018,Kansas City Royals,KC,58,104,0.358,Central Division,American League,Eliminated from Postseason Contention,129920000
-2019,Kansas City Royals,KC,59,103,0.364,Central Division,American League,Eliminated from Postseason Contention,96547237
-2020,Kansas City Royals,KC,26,34,0.433,Central Division,American League,Eliminated from Postseason Contention,35631531
-2021,Kansas City Royals,KC,74,88,0.457,Central Division,American League,Eliminated from Postseason Contention,87779400
-2022,Kansas City Royals,KC,65,97,0.401,Central Division,American League,Eliminated from Postseason Contention,74110000
-2023,Kansas City Royals,KC,56,106,0.346,Central Division,American League,Eliminated from Postseason Contention,75825000
+2018,Kansas City Royals,KCR,58,104,0.358,Central Division,American League,Eliminated from Postseason Contention,129920000
+2019,Kansas City Royals,KCR,59,103,0.364,Central Division,American League,Eliminated from Postseason Contention,96547237
+2020,Kansas City Royals,KCR,26,34,0.433,Central Division,American League,Eliminated from Postseason Contention,35631531
+2021,Kansas City Royals,KCR,74,88,0.457,Central Division,American League,Eliminated from Postseason Contention,87779400
+2022,Kansas City Royals,KCR,65,97,0.401,Central Division,American League,Eliminated from Postseason Contention,74110000
+2023,Kansas City Royals,KCR,56,106,0.346,Central Division,American League,Eliminated from Postseason Contention,75825000
 2018,Los Angeles Angels,LAA,80,82,0.494,West Division,American League,Eliminated from Postseason Contention,175100000
 2019,Los Angeles Angels,LAA,72,90,0.444,West Division,American League,Eliminated from Postseason Contention,158878583
 2020,Los Angeles Angels,LAA,26,34,0.433,West Division,American League,Eliminated from Postseason Contention,69282429
@@ -131,18 +131,18 @@ Year,Team,Team Abbreviation,Wins,Losses,Winning Percentage,Division,League,Seaso
 2021,Pittsburgh Pirates,PIT,61,101,0.377,Central Division,National League,Eliminated from Postseason Contention,35905000
 2022,Pittsburgh Pirates,PIT,62,100,0.383,Central Division,National League,Eliminated from Postseason Contention,37875000
 2023,Pittsburgh Pirates,PIT,76,86,0.469,Central Division,National League,Eliminated from Postseason Contention,60787500
-2018,San Diego Padres,SD,66,96,0.407,West Division,National League,Eliminated from Postseason Contention,96130000
-2019,San Diego Padres,SD,70,92,0.432,West Division,National League,Eliminated from Postseason Contention,74033835
-2020,San Diego Padres,SD,37,23,0.617,West Division,National League,Postseason Contender,69465574
-2021,San Diego Padres,SD,79,83,0.488,West Division,National League,Eliminated from Postseason Contention,171686600
-2022,San Diego Padres,SD,89,73,0.549,West Division,National League,Postseason Contender,208772618
-2023,San Diego Padres,SD,82,80,0.506,West Division,National League,Eliminated from Postseason Contention,236962024
-2018,San Francisco Giants,SF,73,89,0.451,West Division,National League,Eliminated from Postseason Contention,208510000
-2019,San Francisco Giants,SF,77,85,0.475,West Division,National League,Eliminated from Postseason Contention,178271237
-2020,San Francisco Giants,SF,29,31,0.483,West Division,National League,Eliminated from Postseason Contention,71170857
-2021,San Francisco Giants,SF,107,55,0.66,West Division,National League,Postseason Contender,127889903
-2022,San Francisco Giants,SF,81,81,0.5,West Division,National League,Eliminated from Postseason Contention,142292500
-2023,San Francisco Giants,SF,79,83,0.488,West Division,National League,Eliminated from Postseason Contention,175590000
+2018,San Diego Padres,SDP,66,96,0.407,West Division,National League,Eliminated from Postseason Contention,96130000
+2019,San Diego Padres,SDP,70,92,0.432,West Division,National League,Eliminated from Postseason Contention,74033835
+2020,San Diego Padres,SDP,37,23,0.617,West Division,National League,Postseason Contender,69465574
+2021,San Diego Padres,SDP,79,83,0.488,West Division,National League,Eliminated from Postseason Contention,171686600
+2022,San Diego Padres,SDP,89,73,0.549,West Division,National League,Postseason Contender,208772618
+2023,San Diego Padres,SDP,82,80,0.506,West Division,National League,Eliminated from Postseason Contention,236962024
+2018,San Francisco Giants,SFG,73,89,0.451,West Division,National League,Eliminated from Postseason Contention,208510000
+2019,San Francisco Giants,SFG,77,85,0.475,West Division,National League,Eliminated from Postseason Contention,178271237
+2020,San Francisco Giants,SFG,29,31,0.483,West Division,National League,Eliminated from Postseason Contention,71170857
+2021,San Francisco Giants,SFG,107,55,0.66,West Division,National League,Postseason Contender,127889903
+2022,San Francisco Giants,SFG,81,81,0.5,West Division,National League,Eliminated from Postseason Contention,142292500
+2023,San Francisco Giants,SFG,79,83,0.488,West Division,National League,Eliminated from Postseason Contention,175590000
 2018,Seattle Mariners,SEA,89,73,0.549,West Division,American League,Eliminated from Postseason Contention,162480000
 2019,Seattle Mariners,SEA,68,94,0.42,West Division,American League,Eliminated from Postseason Contention,138865075
 2020,Seattle Mariners,SEA,27,33,0.45,West Division,American League,Eliminated from Postseason Contention,48421623
@@ -155,12 +155,12 @@ Year,Team,Team Abbreviation,Wins,Losses,Winning Percentage,Division,League,Seaso
 2021,St. Louis Cardinals,STL,90,72,0.556,Central Division,National League,Postseason Contender,135047200
 2022,St. Louis Cardinals,STL,93,69,0.574,Central Division,National League,Postseason Contender,150746666
 2023,St. Louis Cardinals,STL,71,91,0.438,Central Division,National League,Eliminated from Postseason Contention,147770834
-2018,Tampa Bay Rays,TB,90,72,0.556,East Division,American League,Eliminated from Postseason Contention,78730000
-2019,Tampa Bay Rays,TB,96,66,0.593,East Division,American League,Postseason Contender,53444931
-2020,Tampa Bay Rays,TB,40,20,0.667,East Division,American League,World Series Runner Up,28735222
-2021,Tampa Bay Rays,TB,100,62,0.617,East Division,American League,Postseason Contender,60388600
-2022,Tampa Bay Rays,TB,86,76,0.531,East Division,American League,Postseason Contender,75347813
-2023,Tampa Bay Rays,TB,99,63,0.611,East Division,American League,Postseason Contender,64652911
+2018,Tampa Bay Rays,TBR,90,72,0.556,East Division,American League,Eliminated from Postseason Contention,78730000
+2019,Tampa Bay Rays,TBR,96,66,0.593,East Division,American League,Postseason Contender,53444931
+2020,Tampa Bay Rays,TBR,40,20,0.667,East Division,American League,World Series Runner Up,28735222
+2021,Tampa Bay Rays,TBR,100,62,0.617,East Division,American League,Postseason Contender,60388600
+2022,Tampa Bay Rays,TBR,86,76,0.531,East Division,American League,Postseason Contender,75347813
+2023,Tampa Bay Rays,TBR,99,63,0.611,East Division,American League,Postseason Contender,64652911
 2018,Texas Rangers,TEX,67,95,0.414,West Division,American League,Eliminated from Postseason Contention,144000000
 2019,Texas Rangers,TEX,78,84,0.481,West Division,American League,Eliminated from Postseason Contention,106017564
 2020,Texas Rangers,TEX,22,38,0.367,West Division,American League,Eliminated from Postseason Contention,63687408
@@ -173,9 +173,9 @@ Year,Team,Team Abbreviation,Wins,Losses,Winning Percentage,Division,League,Seaso
 2021,Toronto Blue Jays,TOR,91,71,0.562,East Division,American League,Eliminated from Postseason Contention,137133333
 2022,Toronto Blue Jays,TOR,92,70,0.568,East Division,American League,Postseason Contender,168070905
 2023,Toronto Blue Jays,TOR,89,73,0.549,East Division,American League,Postseason Contender,205680777
-2018,Washington Nationals,WSH,82,80,0.506,East Division,National League,Eliminated from Postseason Contention,181590000
-2019,Washington Nationals,WSH,93,69,0.574,East Division,National League,World Series Champion,161715381
-2020,Washington Nationals,WSH,26,34,0.433,East Division,National League,Eliminated from Postseason Contention,66525837
-2021,Washington Nationals,WSH,65,97,0.401,East Division,National League,Eliminated from Postseason Contention,161907528
-2022,Washington Nationals,WSH,55,107,0.34,East Division,National League,Eliminated from Postseason Contention,114623095
-2023,Washington Nationals,WSH,71,91,0.438,East Division,National League,Eliminated from Postseason Contention,79983095
+2018,Washington Nationals,WSN,82,80,0.506,East Division,National League,Eliminated from Postseason Contention,181590000
+2019,Washington Nationals,WSN,93,69,0.574,East Division,National League,World Series Champion,161715381
+2020,Washington Nationals,WSN,26,34,0.433,East Division,National League,Eliminated from Postseason Contention,66525837
+2021,Washington Nationals,WSN,65,97,0.401,East Division,National League,Eliminated from Postseason Contention,161907528
+2022,Washington Nationals,WSN,55,107,0.34,East Division,National League,Eliminated from Postseason Contention,114623095
+2023,Washington Nationals,WSN,71,91,0.438,East Division,National League,Eliminated from Postseason Contention,79983095
