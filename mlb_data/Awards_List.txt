@@ -1,0 +1,20 @@
+Yr: Year
+ALCSMVP: ALCS MVP
+NLCSMVP: NLCS MVP
+WSMVP: World Series MVP
+AMVP: AL MVP Award
+NMVP: NL MVP Award
+ACY: AL Cy Young Award
+NCY: NL Cy Young Award
+AHA: AL Hank Aaron Award
+NHA: NL Hank Aaron Award
+BR: Babe Ruth Award
+EM: Edgar Martinez Award
+ABC: AL Batting Champion
+NBC: NL Batting Champion
+APEC: AL Pitching ERA Chamption
+NPEC: NL Pitching ERA Champion
+ARY: AL Rookie of the Year
+NRY: NL Rookie of the Year
+ACPY: AL Comeback Player of the Year
+NCPY: NL Comeback Player of the Year

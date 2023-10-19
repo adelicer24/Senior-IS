@@ -1,4 +1,4 @@
-Year,Name,Age,Team,Wins,Losses,W-L%,ERA,G,GS,GF,CG,SHO,SV,IP,BF,H,R,HR,ER,SO,BB,WP
+Year,Name,Age,Team,W,L,W%,ERA,GP,GS,GF,CG,SHO,SV,IP,BF,H,R,HR,ER,SO,BB,WP
 2018,Jason Adam,26,KCR,0,3,0,6.12,31,0,14,0,0,0,32.1,142,30,22,9,22,37,15,4
 2018,Austin Adams,27,WSN,0,0,N/R,0,2,0,0,0,0,0,1,7,1,0,0,0,0,3,0
 2018,Chance Adams,23,NYY,0,1,0,7.04,3,1,1,0,0,0,7.2,34,8,7,3,6,4,4,0

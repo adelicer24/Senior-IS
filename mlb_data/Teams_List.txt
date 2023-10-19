@@ -1,0 +1,11 @@
+Yr: Year
+Tm: Team Name
+Abb: Team Abbreviation
+W: Wins
+L: Losses
+W%: Winning Percentage
+Dv: Division
+Lg: League
+DR: Division Rank
+SO: Season Outcome
+Pr: Payroll
