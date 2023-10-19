@@ -1,7 +1,7 @@
 import csv
 
-team_stat_list = ['Year', 'Team Name', 'Team Abbreviation', 'Wins', 'Losses', 'Winning Percentage', 'Division', 'League', 'Season Outcome', 'Payroll']
-tslAbb = ['Yr', 'Tm', 'Abb', 'W', 'L', 'W%', 'Dv', 'Lg', 'SO', 'P']
+team_stat_list = ['Year', 'Team Name', 'Team Abbreviation', 'Wins', 'Losses', 'Winning Percentage', 'Division', 'League', 'Division Rank', 'Season Outcome', 'Payroll']
+tslAbb = ['Yr', 'Tm', 'Abb', 'W', 'L', 'W%', 'Dv', 'Lg', 'DvR', 'SO', 'P']
 
 fielding_stat_list = ['Year', 'Name', 'Age', 'Team', 'Games played', 'Games Started', 'Complete Games', 'Innings played', 
                       'Defensive Chances', 'Putouts', 'Assists', 'Errors', 'Fielding Percentage', 'Total Fielding Runs Above Average', 
@@ -36,13 +36,21 @@ bslAbb = ['Yr', 'Nm', 'Age', 'Tm', 'GP', 'PA', 'AB', 'R', 'H', '2B', '3B', 'HR',
           'TB', 'Pos', 'O', 'RC', 'RC/G', 'RAA', 'RAR', 'WAR', 'oWAR', 'dWAR', 'oRAR', 'P', 'WPA', 'WPA+', 'WPA-', 'aLI', 'WPA/LI', 'rOBA', 'BAbip', 
           'ISO', 'HR%', 'SO%', 'BB%', 'RS%', 'SB%', 'XBH%', 'SO/W', 'AB/SO', 'AB/HR', 'AB/RBI', 'IP%', 'LD%']
 
+player_award_list =['Year', 'ALCS MVP', 'NLCS MVP', 'World Series MVP', 'AL MVP Award', 'NL MVP Award', 'AL Cy Young Award', 'NL Cy Young Award', 
+                    'AL Hank Aaron Award', 'NL Hank Aaron Award', 'Babe Ruth Award', 'Edgar Martinez Award', 'AL Batting Champion', 'NL Batting Champion', 
+                    'AL Pitching ERA Chamption', 'NL Pitching ERA Champion', 'AL Rookie of the Year', 'NL Rookie of the Year', 'AL Comeback Player of the Year', 
+                    'NL Comeback Player of the Year']
+palAbb = ['Year', 'ALCS MVP', 'NLCS MVP', 'World Series MVP', 'AL MVP Award', 'NL MVP Award', 'AL Cy Young Award', 'NL Cy Young Award', 
+                    'AL Hank Aaron Award', 'NL Hank Aaron Award', 'Babe Ruth Award', 'Edgar Martinez Award', 'AL Batting Champion', 'NL Batting Champion', 
+                    'AL Pitching ERA Chamption', 'NL Pitching ERA Champion', 'AL Rookie of the Year', 'NL Rookie of the Year', 'AL Comeback Player of the Year', 
+                    'NL Comeback Player of the Year']
 
 print("\n Team Season Statistics")
 print(tslAbb[:])
 with open('mlb_data/Teams_2018-2023.csv', "r") as csvfile:
     reader = csv.reader(csvfile)
     for r in reader:
-        if r[1] == 'Atlanta Braves':
+        if r[9] == 'World Series Champion':
             print(r)
 
 print("\n Player Fielding Statistics")
@@ -67,4 +75,12 @@ with open('mlb_data/Batting_2018-2023.csv', "r") as csvfile:
     reader = csv.reader(csvfile)
     for r in reader:
         if r[1] == 'Matt Olson':
+            print(r)
+
+print("\n Player Awards")
+print(palAbb[:])
+with open('mlb_data/Awards_2018-2023.csv', "r") as csvfile:
+    reader = csv.reader(csvfile)
+    for r in reader:
+        if r[0] == '2022':
             print(r)
