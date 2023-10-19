@@ -9,18 +9,18 @@ fielding_stat_list = ['Year', 'Name', 'Age', 'Team', 'Games played', 'Games Star
 fslAbb = ['Yr', 'Nm', 'Age', 'Tm', 'GP', 'GS', 'CG', 'IP', 'DC', 'PO', 'A', 'E', 'FP', 'FRtot', 'DRStot', 'RF/9', 'RF/G', 'Pos']
 
 pitching_stat_list = ['Year', 'Name', 'Age', 'Team', 'Wins', 'Losses', 'Winning Percentage', 'Earned Runs Average', 'Games played', 
-                      'Games Started', 'Games Finished', 'Complete Games', 'SHO', 'Saves', 'Innings played', 'Hits allowed', 'Runs allowed', 
+                      'Games Started', 'Games Finished', 'Complete Games', 'Shutouts', 'Saves', 'Innings played', 'Hits allowed', 'Runs allowed', 
                       'Earned Runs', 'Home Runs Allowed', 'Bases on Balls/Walks', 'Strikeouts', 'Wild Pitches', 'Batters Faced', 
                       'Earned Runs Average Plus', 'Fielding Independent Pitching', 'Walks and Hits Per Inning Pitched', 'Hits per 9 innings', 
                       'Home Runs per 9 Innings', 'Base on Balls per 9 Innings', 'Strikeouts per 9 Innings', 'Strikeout to Walk Ratio', 
-                      'Wins Aabove Replacement', 'Runs Above Replacement', 'Batted Average Against', 'On-Base Percentage Against', 
+                      'Wins Above Replacement', 'Runs Above Replacement', 'Batted Average Against', 'On-Base Percentage Against', 
                       'Slugging Percentage Against', 'On-base Percentage Plus Slugging Percentage Against', 'Batted Average on Balls in Play Against', 
                       'Plays Included in Win Probability Added', 'Win Probability Added by Pitcher', 'Win Probability Added', 
                       'Win Porbability Subtracted', 'Average Leverage Index', 'Situational Wins', 'Home Run Percentage', 'Strikeout Percentage', 
                       'Base on Balls Percentage', 'Extra Base Hit Percentage']
 pslAbb = ['Yr', 'Nm', 'Age', 'Tm', 'W', 'L', 'W%', 'ERA', 'GP', 'GS', 'GF', 'CG', 'SHO', 'SV', 'IP', 'HA', 'RA', 'ER', 'HRA', 'BB/W', 'SO', 
           'WP', 'BF', 'ERA+', 'FIP', 'WHIP', 'H9', 'HR9', 'BB9', 'SO9', 'SO/W', 'WAR', 'RAR', 'BAA', 'OBPA', 'SLGA', 'OPSA', 'BAbipA', 
-          'Plays', 'WPA', 'WPA+', 'WPA-', 'aLI', 'WPA/LI', 'HR%', 'SO%', 'BB%', 'XBH%']
+          'P', 'WPA', 'WPA+', 'WPA-', 'aLI', 'WPA/LI', 'HR%', 'SO%', 'BB%', 'XBH%']
 
 batting_stat_list = ['Year', 'Name', 'Age', 'Team', 'Games played', 'Plate Appearances', 'At Bats', 'Runs', 'Hits', 'Doubles', 'Triples', 
                      'Home Runs', 'Runs Batted In', 'Stolen Bases', 'Caught Stealing', 'Base on Balls/Walks', 'Strikeouts', 'Batting Average', 
@@ -45,37 +45,6 @@ palAbb = ['Year', 'ALCS MVP', 'NLCS MVP', 'World Series MVP', 'AL MVP Award', 'N
                     'AL Pitching ERA Chamption', 'NL Pitching ERA Champion', 'AL Rookie of the Year', 'NL Rookie of the Year', 'AL Comeback Player of the Year', 
                     'NL Comeback Player of the Year']
 
-print("\n Team Season Statistics")
-print(tslAbb[:])
-with open('mlb_data/Teams_2018-2023.csv', "r") as csvfile:
-    reader = csv.reader(csvfile)
-    for r in reader:
-        if r[9] == 'World Series Champion':
-            print(r)
-
-print("\n Player Fielding Statistics")
-print(fslAbb[:])
-with open('mlb_data/Fielding_2018-2023.csv', "r") as csvfile:
-    reader = csv.reader(csvfile)
-    for r in reader:
-        if r[1] == 'Ronald Acuna Jr.':
-            print(r)
-
-print("\n Player Pitching Statistics")
-print(pslAbb[:])
-with open('mlb_data/Pitching_2018-2023.csv', "r") as csvfile:
-    reader = csv.reader(csvfile)
-    for r in reader:
-        if r[1] == 'Shohei Ohtani':
-            print(r)
-
-print("\n Player Batting Statistics")
-print(bslAbb[:])
-with open('mlb_data/Batting_2018-2023.csv', "r") as csvfile:
-    reader = csv.reader(csvfile)
-    for r in reader:
-        if r[1] == 'Matt Olson':
-            print(r)
 
 print("\n Player Awards")
 print(palAbb[:])
@@ -83,4 +52,12 @@ with open('mlb_data/Awards_2018-2023.csv', "r") as csvfile:
     reader = csv.reader(csvfile)
     for r in reader:
         if r[0] == '2022':
+            print(r)
+
+print("\n Team Season Statistics")
+print(tslAbb[:])
+with open('mlb_data/Teams_2018-2023.csv', "r") as csvfile:
+    reader = csv.reader(csvfile)
+    for r in reader:
+        if r[9] == 'World Series Champion':
             print(r)
