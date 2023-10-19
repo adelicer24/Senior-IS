@@ -1,4 +1,4 @@
-Year,Name,Age,Team,GP,GS,IP,FIP,WAR,RAR,BAbipA,P,WPA,WPA+,WPA-,aLI,WPA/LI
+Year,Name,Age,Team,GP,GS,IP,FIP,WAR,RAR,BAbipA,P,WPAp,WPA+,WPA-,aLI,WPA/LI
 2018,Jason Adam,26,KCR,31,0,32.1,6.16,-0.2,-2,0.269,150,-0.7,1.4,-2.1,0.66,-0.1
 2018,Austin Adams,27,WSN,2,0,1,12.16,0.1,1,0.25,7,-0.3,0,-0.3,1.5,-0.1
 2018,Chance Adams,23,NYY,3,1,7.2,8.77,-0.2,-2,0.217,35,-0.2,0.2,-0.4,0.36,-0.3

@@ -46,7 +46,7 @@ SO/W: Strikeout to Walk Ratio
 HR%: Home Run Percentage
 SO%: Strikeout Percentage
 BB%: Base on Balls Percentage
-XBH%: Extra Base Hit Percentage
+XBHA%: Extra Base Hit Against Percentage
 
 
 Sabermetrics
@@ -62,7 +62,7 @@ WAR: Wins Above Replacement
 RAR: Runs Above Replacement
 BAbipA: Batted Average on Balls in Play Against
 P: Plays Included in Win Probability Added
-WPA: Win Probability Added by Pitcher
+WPAp: Win Probability Added by Pitcher
 WPA+: Win Probability Added
 WPA-: Win Porbability Subtracted
 aLI: Average Leverage Index

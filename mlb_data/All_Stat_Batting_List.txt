@@ -68,7 +68,7 @@ RAR: Runs Above Replacement
 oRAR: Offensive Runs Above Replacement
 rOBA: Player Total Offensive Contributions
 P: Plays Included in Win Probability Added
-WPA: Win Probability Added by Offensive Player
+WPAo: Win Probability Added by Offensive Player
 WPA+: Win Probability Added
 WPA-: Win Probability Subtracted
 aLI: Average Leverage Index
