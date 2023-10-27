@@ -21,3 +21,11 @@ def comparison():
 @app.route("/glossary")
 def glossary():
     return render_template("glossary.html")
+
+@app.route("/teams")
+def teams():
+    return render_template("teams.html")
+
+@app.route("/awards")
+def awards():
+    return render_template("awards.html")

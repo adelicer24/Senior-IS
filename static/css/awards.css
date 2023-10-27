@@ -1,6 +1,59 @@
 .main {
-    width: 100%;
+    width: 95%;
     padding-bottom: 3%;
+    padding-left: 2%;
+    overflow-x: auto;
+    display: block;
+}
+
+.filter {
+    float: left;
+}
+
+.caption {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;
+    margin-right: 10px;
+}
+
+.dropdown {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;
+    margin-bottom: 10px;
+    float: right;
+    width: 75px;
+}
+
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+    position: relative;
+    width: 250%;
+}
+
+th {
+    background: crimson;
+    border: 2px solid black;
+    padding: 0.2%;
+    text-align: left;
+    font-size:large;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+td {
+    text-align: left;
+    background: rgb(235, 235, 235);
+    border: 2px solid black;
+    padding: 0.25%;
+    font-size: medium;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.credit {
+    text-align: left;
+    font-size: medium;
+    padding-top: 15px;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .footer {

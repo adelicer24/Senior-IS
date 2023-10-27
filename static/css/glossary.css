@@ -1,13 +1,13 @@
 .main {
-    width: 100%;
+    width: 85%;
     padding-bottom: 3%;
     padding-left: 10%;
-    padding-right: 10%;
+    padding-right: 5%;
 }
 
 table {
     border: 2px solid black;
-    width: 80%;
+    width: 90%;
     border-collapse: collapse;
     position: relative;
 }
@@ -18,7 +18,7 @@ th {
     padding: 1%;
     text-align: left;
     font-size:x-large;
-    font-family:Arial, Helvetica, sans-serif
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 td {
@@ -27,12 +27,27 @@ td {
     border: 2px solid black;
     padding: 0.5%;
     font-size: large;
-    font-family:Arial, Helvetica, sans-serif
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .credit {
     text-align: left;
     font-size: medium;
     padding-top: 15px;
-    font-family:Arial, Helvetica, sans-serif
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.footer {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: crimson;
+    color: black;
+    font-size: large;
+    height: 90px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border-top: 3px;
+    border-top-style: solid;
+    border-color: black;
 }

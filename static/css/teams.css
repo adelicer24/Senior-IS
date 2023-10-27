@@ -1,0 +1,121 @@
+.main {
+    width: 95%;
+    padding-bottom: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.myInput {
+    width: 20%;
+    font-size: 16px;
+    padding: 12px 20px 12px 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+.search {
+    width: 100%;
+}
+
+.filter {
+    float: left;
+}
+
+.caption {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;
+    margin-right: 10px;
+}
+
+.dropdown {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;
+    margin-bottom: 10px;
+    float: right;
+    width: 75px;
+}
+
+table {
+    border: 2px solid black;
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+}
+
+th {
+    background: crimson;
+    border: 2px solid black;
+    padding: 0.25%;
+    text-align: left;
+    font-size:x-large;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+td {
+    text-align: left;
+    background: rgb(235, 235, 235);
+    border: 2px solid black;
+    padding: 0.5%;
+    height: 50px;
+    font-size: large;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.credit {
+    text-align: left;
+    font-size: medium;
+    padding-top: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.footer {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: crimson;
+    color: black;
+    font-size: large;
+    height: 90px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border-top: 3px;
+    border-top-style: solid;
+    border-color: black;
+}
+
+.buttons2 a {
+    position: relative;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 25px;
+}
+
+.buttons2 {
+    display: flex;
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-bottom: 5px;
+    overflow: hidden;
+    position: relative;
+    background-color: crimson;
+    border-bottom: 3px;
+    border-bottom-style: solid;
+    border-color: black;
+}
+
+.buttons2 a:hover {
+    color: crimson;
+    cursor: pointer;
+}
+
+.buttons2 a.active {
+    background-color: white;
+    color: black;
+    cursor: not-allowed;
+}
