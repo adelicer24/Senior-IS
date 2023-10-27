@@ -22,10 +22,10 @@ def comparison():
 def glossary():
     return render_template("base-templates/glossary.html")
 
-@app.route("/statistics/teams")
+@app.route("/statistics-teams")
 def teams():
     return render_template("stat-templates/teams.html")
 
-@app.route("/statistics/awards")
+@app.route("/statistics-awards")
 def awards():
     return render_template("stat-templates/awards.html")
