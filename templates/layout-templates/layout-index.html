@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="initial-scale=1, width=device-width">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/layout-css/layout.css') }}">
     </head>
 
     <div class="header">
@@ -15,11 +15,11 @@
         </h1>
 
         <div class="buttons">
-            <a href="/">Home</a>
+            <a class="active" href="/">Home</a>
             <a href="/about">About</a>
             <a href="/statistics">Statistics</a>
             <a href="/comparison">Statistic Comparison</a>
-            <a class="active" href="/glossary">Statistic Glossary</a>
+            <a href="/glossary">Statistic Glossary</a>
         </div>
     </div>
 </html>

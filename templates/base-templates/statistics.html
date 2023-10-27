@@ -1,0 +1,42 @@
+{% extends 'layout-templates/layout-statistics.html' %}
+{% block body %}
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base-css/statistics.css') }}">
+    </head>
+
+    <div class="buttons2">
+        <a href="/statistics/awards">Awards</a>
+        <a href="/statistics/">Standard Batting</a>
+        <a href="/statistics/">Advanced Batting</a>
+        <a href="/statistics/">Sabermetric Batting</a>
+        <a href="/statistics/">Standard Fielding</a>
+        <a href="/statistics/">Advanced Fielding</a>
+        <a href="/statistics/">Standard Pitching</a>
+        <a href="/statistics/">Advanced Pitching</a>
+        <a href="/statistics/">Sabermetric Pitching</a>
+        <a href="/statistics/teams">Teams</a>
+    </div>
+
+    <h1>
+        Search for Statistics
+    </h1>
+
+    <div class="main">
+        Hello World!
+    </div>
+    
+    <div class="footer">
+        Alex Delicer
+        <br>
+        The College of Wooster
+        <br>
+        Phone: +1 470 429 1104
+        <br>
+        Email: adelicer24@wooster.edu
+    </div>
+</html>
+{% endblock %}
