@@ -24,8 +24,8 @@ def glossary():
 
 @app.route("/teams")
 def teams():
-    return render_template("teams.html")
+    return render_template("stat-templates/teams.html")
 
 @app.route("/awards")
 def awards():
-    return render_template("awards.html")
+    return render_template("stat-templates/awards.html")
