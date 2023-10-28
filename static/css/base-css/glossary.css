@@ -5,8 +5,26 @@
     padding-right: 5%;
 }
 
-.myInput {
-    width: 25%;
+.category {
+    width: 13%;
+    font-size: 16px;
+    padding: 12px 20px 12px 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    margin-right: 3px;
+}
+
+.abbreviation {
+    width: 13%;
+    font-size: 16px;
+    padding: 12px 20px 12px 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    margin-right: 2px;
+}
+
+.name {
+    width: 13%;
     font-size: 16px;
     padding: 12px 20px 12px 10px;
     border: 1px solid #ddd;

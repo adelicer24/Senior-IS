@@ -14,16 +14,18 @@
 
     <div class="main">
         <div class="search">
-            <input type="text" id="myInput" class="myInput" onkeyup="myFunction()" placeholder="Search by category, abbreviation, or name..">
+            <input type="text" id="category" class="category" onkeyup="search()" placeholder="Search by category...">
+            <input type="text" id="abbreviation" class="abbreviation" onkeyup="search()" placeholder="Search by abbreviation...">
+            <input type="text" id="name" class="name" onkeyup="search()" placeholder="Search by name...">
         </div>
 
         <table id="myTable">
             <thead>
                 <tr class="head">
-                    <th>Statistic Category</th>
-                    <th>Statistic Abbreviation</th>
-                    <th>Statistic Name</th>
-                    <th>Definition</th>
+                    <th style="width: 15%;">Statistic Category</th>
+                    <th style="width: 15%;">Statistic Abbreviation</th>
+                    <th style="width: 15%;">Statistic Name</th>
+                    <th style="width: 40%;">Definition</th>
                 </tr>
             </thead>
             <tbody>
@@ -571,30 +573,37 @@
         </table>
 
         <script>
-            function myFunction() {
-                var input, filter, table, tr, td, i, txtValue;
-                input = document.getElementById("myInput");
-                filter = input.value.toUpperCase();
+            function search() {
+                var input_category, input_abb, input_name, filter, table, tr, td, i, txtValue_category, txtValue_abb, txtValue_name;
+                input_category = document.getElementById("category");
+                input_abb = document.getElementById("abbreviation");
+                input_name = document.getElementById("name");
+
+                filter_category = input_category.value.toUpperCase();
+                filter_abb = input_abb.value.toUpperCase();
+                filter_name = input_name.value.toUpperCase();
+
                 table = document.getElementById("myTable");
                 tr = table.getElementsByTagName("tr");
                 
                 for (i = 1; i < tr.length; i++) {
-                    alltags = tr[i].getElementsByTagName("td");
-                    isFound = false;
-                    for(j=0; j< alltags.length; j++) {
-                    td = alltags[j];
-                    
-                        if (td) {
-                        txtValue = td.textContent || td.innerText;
-                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                tr[i].style.display = "";
-                                j = alltags.length;
-                                isFound = true;
-                            }
-                        }       
-                    }
-                    if(!isFound && tr[i].className !== "head") {
-                        tr[i].style.display = "none";
+                    td_category = tr[i].getElementsByTagName("td")[0];
+                    td_abb = tr[i].getElementsByTagName("td")[1];
+                    td_name = tr[i].getElementsByTagName("td")[2];
+
+                    if (td_category && td_abb && td_name){
+                        txtValue_category = td_category.textContent || td_category.innerText;
+                        txtValue_abb = td_abb.textContent || td_abb.innerText;
+                        txtValue_name = td_name.textContent || td_name.innerText;
+
+                        if (txtValue_category.toUpperCase().indexOf(filter_category) > -1
+                            && txtValue_abb.toUpperCase().indexOf(filter_abb) > -1
+                            &&txtValue_name.toUpperCase().indexOf(filter_name) > -1) {
+                            tr[i].style.display="";
+                        }
+                        else {
+                            tr[i].style.display = "none";
+                        }
                     }
                 }
             }
