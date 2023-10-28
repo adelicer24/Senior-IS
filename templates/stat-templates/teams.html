@@ -27,21 +27,12 @@
 
     <div class="main">
         <div class="search">
-            <input type="text" id="myInput" class="myInput" onkeyup="myFunction()" placeholder="Search by any column..">
-        </div>
-
-        <div class="filter">
-            <label class="caption" for="year">Filter By Year: </label>
-            
-            <select class="dropdown" id="year" onchange="filterTable()">
-                <option value="all">All</option>
-                <option value="2018">2018</option>
-                <option value="2019">2019</option>
-                <option value="2020">2020</option>
-                <option value="2021">2021</option>
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-            </select>
+            <input type="text" id="year" class="year" onkeyup="search()" placeholder="Year..">
+            <input type="text" id="team" class="team" onkeyup="search()" placeholder="Team..">
+            <input type="text" id="division" class="division" onkeyup="search()" placeholder="Division..">
+            <input type="text" id="league" class="league" onkeyup="search()" placeholder="League..">
+            <input type="text" id="dvout" class="dvout" onkeyup="search()" placeholder="Division outcome..">
+            <input type="text" id="snout" class="snout" onkeyup="search()" placeholder="Season outcome..">
         </div>
 
         <table id="myTable">
@@ -2405,51 +2396,52 @@
         </table>
 
         <script>
-            function myFunction() {
-                var input, filter, table, tr, td, i, txtValue;
-                input = document.getElementById("myInput");
-                filter = input.value.toUpperCase();
+             function search() {
+                var input_year, input_team, input_division, input_league, input_dvout, input_snout, filter, table, tr, td, i, txtValue_year, txtValue_team, txtValue_division, txtValue_league, txtValue_dvout, txtValue_snout;
+                input_year = document.getElementById("year");
+                input_team = document.getElementById("team");
+                input_division = document.getElementById("division");
+                input_league = document.getElementById("league");
+                input_dvout = document.getElementById("dvout");
+                input_snout = document.getElementById("snout");
+
+                filter_year = input_year.value.toUpperCase();
+                filter_team = input_team.value.toUpperCase();
+                filter_division = input_division.value.toUpperCase();
+                filter_league = input_league.value.toUpperCase();
+                filter_dvout = input_dvout.value.toUpperCase();
+                filter_snout = input_snout.value.toUpperCase();
+
                 table = document.getElementById("myTable");
                 tr = table.getElementsByTagName("tr");
                 
                 for (i = 1; i < tr.length; i++) {
-                    alltags = tr[i].getElementsByTagName("td");
-                    isFound = false;
-                    for(j=0; j< alltags.length; j++) {
-                    td = alltags[j];
-                    
-                        if (td) {
-                        txtValue = td.textContent || td.innerText;
-                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                tr[i].style.display = "";
-                                j = alltags.length;
-                                isFound = true;
-                            }
-                        }       
-                    }
-                    if(!isFound && tr[i].className !== "head") {
-                        tr[i].style.display = "none";
-                    }
-                }
-            }
+                    td_year = tr[i].getElementsByTagName("td")[0];
+                    td_team = tr[i].getElementsByTagName("td")[1];
+                    td_division = tr[i].getElementsByTagName("td")[6];
+                    td_league = tr[i].getElementsByTagName("td")[7];
+                    td_dvout = tr[i].getElementsByTagName("td")[8];
+                    td_snout = tr[i].getElementsByTagName("td")[9];
 
-            function filterTable(){
-                var dropdown=document.getElementById("year");
-                var selectedValue=dropdown.value;
-                var table=document.getElementById("myTable");
-                var rows=table.getElementsByTagName("tr");
+                    if (td_year && td_team && td_division && td_league && td_dvout && td_snout){
+                        txtValue_year = td_year.textContent || td_year.innerText;
+                        txtValue_team = td_team.textContent || td_team.innerText;
+                        txtValue_division = td_division.textContent || td_division.innerText;
+                        txtValue_league = td_league.textContent || td_league.innerText;
+                        txtValue_dvout = td_dvout.textContent || td_dvout.innerText;
+                        txtValue_snout = td_snout.textContent || td_snout.innerText;
 
-                for(var i=1;i<rows.length;i++)
-                {
-                    var row=rows[i];
-                    var year=row.cells[0].textContent.trim();
-
-                    if(selectedValue==="all" || year===selectedValue)
-                    {
-                        row.style.display="";
-                    }
-                    else{
-                        row.style.display="none";
+                        if (txtValue_year.toUpperCase().indexOf(filter_year) > -1
+                            && txtValue_team.toUpperCase().indexOf(filter_team) > -1
+                            && txtValue_division.toUpperCase().indexOf(filter_division) > -1
+                            && txtValue_league.toUpperCase().indexOf(filter_league) > -1
+                            && txtValue_dvout.toUpperCase().indexOf(filter_dvout) > -1
+                            && txtValue_snout.toUpperCase().indexOf(filter_snout) > -1) {
+                            tr[i].style.display="";
+                        }
+                        else {
+                            tr[i].style.display = "none";
+                        }
                     }
                 }
             }

@@ -7,16 +7,16 @@
 
 .category {
     width: 13%;
-    font-size: 16px;
+    font-size: 14px;
     padding: 12px 20px 12px 10px;
     border: 1px solid #ddd;
     margin-bottom: 12px;
-    margin-right: 3px;
+    margin-right: 2px;
 }
 
 .abbreviation {
     width: 13%;
-    font-size: 16px;
+    font-size: 14px;
     padding: 12px 20px 12px 10px;
     border: 1px solid #ddd;
     margin-bottom: 12px;
@@ -25,7 +25,7 @@
 
 .name {
     width: 13%;
-    font-size: 16px;
+    font-size: 14px;
     padding: 12px 20px 12px 10px;
     border: 1px solid #ddd;
     margin-bottom: 12px;

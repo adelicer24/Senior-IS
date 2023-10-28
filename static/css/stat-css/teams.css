@@ -5,9 +5,53 @@
     padding-right: 2%;
 }
 
-.myInput {
-    width: 25%;
-    font-size: 16px;
+.year {
+    width: 2.5%;
+    font-size: 11px;
+    padding: 12px 20px 12px 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    margin-right: 2px;
+}
+
+.team {
+    width: 8.7%;
+    font-size: 11px;
+    padding: 12px 20px 12px 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    margin-right: 485px;
+}
+
+.division {
+    width: 6.3%;
+    font-size: 11px;
+    padding: 12px 20px 12px 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    margin-right: 2px;
+}
+
+.league {
+    width: 5.8%;
+    font-size: 11px;
+    padding: 12px 20px 12px 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+.dvout {
+    width: 6.2%;
+    font-size: 11px;
+    padding: 12px 20px 12px 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    margin-right: 2px;
+}
+
+.snout {
+    width: 11.3%;
+    font-size: 11px;
     padding: 12px 20px 12px 10px;
     border: 1px solid #ddd;
     margin-bottom: 12px;
@@ -15,24 +59,6 @@
 
 .search {
     width: 100%;
-}
-
-.filter {
-    float: left;
-}
-
-.caption {
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: large;
-    margin-right: 10px;
-}
-
-.dropdown {
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: large;
-    margin-bottom: 10px;
-    float: right;
-    width: 75px;
 }
 
 table {
