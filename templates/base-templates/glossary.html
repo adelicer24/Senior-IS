@@ -13,98 +13,592 @@
     </h1>
 
     <div class="main">
-        <table>
-            <tr><th>Statistic Abbreviation</th> <th>Statistic Name</th> <th>Definition</th></tr>
-            <tr><td>ERA+</td> <td>Adjusted Earned Run Average</td> <td>A normalized version of ERA that accounts for external factors like ballparks and opponents</td></tr>
-            <tr><td>A</td> <td>Assists</td> <td>Awarded to a defensive player who touches the ball prior to a runner being thrown out</td></tr>
-            <tr><td>AB</td> <td>At Bats</td> <td>A plate appearance that ends with a batter being out (except sacrifice plays) or ends with a player reaching a base by a hit, error, or fielder's choice</td></tr>
-            <tr><td>AB/HR</td> <td>At Bats per Home Run</td> <td>The number of at bats a player has divided by the number of home runs a player has hit</td></tr>
-            <tr><td>AB/RBI</td> <td>At Bats per Run Batted In</td> <td>The number of at bats a player has divided by the number RBIs that a player has</td></tr>
-            <tr><td>AB/SO</td> <td>At Bats per Strikeout</td> <td>The number of at bats a player has divided by the number times a player has struck out</td></tr>
-            <tr><td>aLI</td> <td>Average Leverage Index</td> <td>The average pressure a batter or pitcher saw during the season</td></tr>
-            <tr><td>BIP%</td> <td>Balls In Play Percentage</td> <td>The percentage of at bats that have resulted in a player putting a ball in play</td></tr>
-            <tr><td>BB/9</td> <td>Base on Balls per 9 Innings</td> <td>The number of bases on balls allowed by a pitcher for every 9 innings</td></tr>
-            <tr><td>BB</td> <td>Bases on Balls/Walks</td> <td>A batter receives four balls in a singular plate appearance and is awarded first base</td></tr>
-            <tr><td>BB%</td> <td>Bases On Balls Percentage</td> <td>The percentage of at bats that have resulted in a player receiving a strike out</td></tr>
-            <tr><td>BAA</td> <td>Batted Average Against</td> <td>The number of hits allowed by a pitcher divided by the number of at-bats</td></tr>
-            <tr><td>BAbipA</td> <td>Batted Average on Balls in Play Against</td> <td>The batting average allowed by a pitcher for balls that are put in play (excluding home runs, strikeouts, and sacrifice flies)</td></tr>
-            <tr><td>BF</td> <td>Batters Faced</td> <td>The number of plate appearances a pitcher has faced</td></tr>
-            <tr><td>BA</td> <td>Batting Average</td> <td>The total number of hits by a player divided by the total number of at-bats</td></tr>
-            <tr><td>BAbip</td> <td>Batting Average on Balls In Play</td> <td>A player's batting average for balls that are put in play (excluding home runs, strikeouts, and sacrifice flies)</td></tr>
-            <tr><td>CS</td> <td>Caught Stealing</td> <td>A base runner is thrown out in between pitches</td></tr>
-            <tr><td>CG</td> <td>Complete Games</td> <td>A pitcher has thrown to every batter in a single game regardless of the length of a game</td></tr>
-            <tr><td>DC</td> <td>Defensive Chances</td> <td>The number of opportunities that a player has to record an out</td></tr>
-            <tr><td>dWAR</td> <td>Defensive Wins Above Replacement</td> <td>A measure of how valuable a player is on defense over another who could replace them at the same position in terms of wins</td></tr>
-            <tr><td>N/A</td> <td>Division Rank</td> <td>A team's rank in their division at the end of the season</td></tr>
-            <tr><td>2B</td> <td>Doubles</td> <td>A batter puts the ball in play and reaches second base without the help of an error or fielder's choice play</td></tr>
-            <tr><td>ERA</td> <td>Earned Run Average</td> <td>The average number of earned runs for every 9 innings</td></tr>
-            <tr><td>ER</td> <td>Earned Runs</td> <td>The total number of runs given up by a pitcher without the assist of an error or passed ball</td></tr>
-            <tr><td>E</td> <td>Errors</td> <td>A defensive player fails to successfully make a play that an average fielder should be able to make</td></tr>
-            <tr><td>XBH%</td> <td>Extra Base Hit Percentage</td> <td>The percentage of at bats that have resulted in a player hitting and reaching second base, third base, and home plate</td></tr>
-            <tr><td>XBHA%</td> <td>Extra Base Hit Percentage</td> <td>The percentage of at-bats that a pitcher has allowed a player to get a hit that results in the batter reaching second base, third base, and home plate</td></tr>
-            <tr><td>FIP</td> <td>Fielding Independent Pitching</td> <td>Measures the plays that the pitcher has the most control over (strikeouts, unintentional walks, hit-by-pitches, and home runs)</td></tr>
-            <tr><td>Fld%</td> <td>Fielding Percentage</td> <td>The number of putouts and assists a defensive player has divided by the total number of defensive chances a player has</td></tr>
-            <tr><td>GF</td> <td>Games Finished</td> <td>A relief pitcher who threw the final pitch of the game for their team</td></tr>
-            <tr><td>GP</td> <td>Games played</td> <td>The number of games that a player has entered a game at any point</td></tr>
-            <tr><td>GS</td> <td>Games Started</td> <td>The number of games that a player has thrown the first pitch for their team</td></tr>
-            <tr><td>H</td> <td>Hits</td> <td>A batter puts the ball in play and reaches at least first base safely without the help of an error or fielder's choice play</td></tr>
-            <tr><td>HA</td> <td>Hits allowed</td> <td>The total number of hits given up by a pitcher</td></tr>
-            <tr><td>H/9</td> <td>Hits per 9 innings</td> <td>The number of hits allowed by a pitcher for every 9 innings</td></tr>
-            <tr><td>HR%</td> <td>Home Run Percentage</td> <td>The percentage of at bats that have resulted in a player hitting a home run</td></tr>
-            <tr><td>HR</td> <td>Home Runs</td> <td>A batter puts a ball in play and reaches home plate safely without the help of an error or fielder's choice play</td></tr>
-            <tr><td>HRA</td> <td>Home Runs Allowed</td> <td>The total number of home runs given up by a pitcher</td></tr>
-            <tr><td>HR/9</td> <td>Home Runs per 9 Innings</td> <td>The number of home runs allowed by a pitcher for every 9 innings</td></tr>
-            <tr><td>IP</td> <td>Innings played</td> <td>The number of innings that a pitcher has thrown in thirds (each out is a third of an inning)</td></tr>
-            <tr><td>ISO</td> <td>Isolated Power</td> <td>An indicator of how often a player hits for extra bases</td></tr>
-            <tr><td>LD%</td> <td>Line Drive Percentage</td> <td>The percentage of balls put into play that are line drives</td></tr>
-            <tr><td>oRAR</td> <td>Offensive Runs Above Replacement</td> <td>A measure of how many runs a player contributes offensively compared to another who could replace them at the same position</td></tr>
-            <tr><td>oWAR</td> <td>Offensive Wins Above Replacement</td> <td>A measure of how valuable a player is on offense over another who could replace them at the same position in terms of wins</td></tr>
-            <tr><td>OBP</td> <td>On-Base Percentage</td> <td>The total number of hits, walks, and hit-by-pitches divided by the total number of plate appearances</td></tr>
-            <tr><td>OBPA</td> <td>On-Base Percentage Against</td> <td>The total number of hits, walks, and hit-by-pitches allowed by a pitcher divided by the total number of plate appearances</td></tr>
-            <tr><td>OPS</td> <td>On-base Percentage Plus Slugging Percentage</td> <td>A number that indicates how well a player can safely reach base and hit for power</td></tr>
-            <tr><td>OPSA</td> <td>On-base Percentage Plus Slugging Percentage Against</td> <td>A number that indicates how well players safely reach base and hit for power against a pitcher</td></tr>
-            <tr><td>OPS+</td> <td>On-base Percentage Plus Slugging Percentage Plus</td> <td>A number used to normalize a player's On Base Percentage across all batters in the league</td></tr>
-            <tr><td>O</td> <td>Outs</td> <td>Recorded when an offensive player is retired by the defense</td></tr>
-            <tr><td>N/A</td> <td>Payroll</td> <td>The amount of money spent by a team on their roster in a season</td></tr>
-            <tr><td>PA</td> <td>Plate Appearances</td> <td>Each completed turn batting regardless of the outcome</td></tr>
-            <tr><td>rOBA</td> <td>Player Total Offensive Contributions</td> <td>A measure of a player's total offensive contributions per plate appearance</td></tr>
-            <tr><td>P</td> <td>Plays Included in Win Probability Added</td> <td>The number of plays that are included in the calculation of Win Probability Added</td></tr>
-            <tr><td>Pos</td> <td>Position(s)</td> <td>The position(s) that a player plays</td></tr>
-            <tr><td>PO</td> <td>Putouts</td> <td>The fielder who is holding the ball when an out is made is credited in it</td></tr>
-            <tr><td>RF/9</td> <td>Range Factor per 9 Innings</td> <td>An estimate on how much field a player can cover by looking at how many plays a player can make for every 9 innings</td></tr>
-            <tr><td>RF/G</td> <td>Range Factor per game</td> <td>An estimate on how much field a player can cover by looking at how many plays a player can make for every 9 innings</td></tr>
-            <tr><td>RS%</td> <td>Run Scoring Percentage</td> <td>The percentage of times that a base runner eventually scores a run</td></tr>
-            <tr><td>R</td> <td>Runs</td> <td>A base runner touches home plate safely</td></tr>
-            <tr><td>RAA</td> <td>Runs Above Average</td> <td>A measure of how may runs a player contributes</td></tr>
-            <tr><td>RAR</td> <td>Runs Above Replacement</td> <td>A measure of how many runs a player contributes compared to another who could replace them at the same position</td></tr>
-            <tr><td>RA</td> <td>Runs allowed</td> <td>The total number of runs given up by a pitcher</td></tr>
-            <tr><td>RBI</td> <td>Runs Batted In</td> <td>A batter receives an RBI for each runner that reaches home plate after the ball is in play (not counted if the batter becomes out or there is an error)</td></tr>
-            <tr><td>RC</td> <td>Runs Created</td> <td>The offensive contribution that a player has made to their team</td></tr>
-            <tr><td>RC/G</td> <td>Runs Created per game</td> <td>The offensive contribution that a player has made to their team per game</td></tr>
-            <tr><td>SV</td> <td>Saves</td> <td>Credited to the final relief pitcher for the winning team who entered the game during a Save Opportunity</td></tr>
-            <tr><td>N/A</td> <td>Season Outcome</td> <td>The state of the season that a team's season has ended</td></tr>
-            <tr><td>SHO</td> <td>Shutouts</td> <td>A pitcher that throws an entire game and does not give up a run to the opposing team</td></tr>
-            <tr><td>WPA/LI</td> <td>Situational Wins</td> <td>The sum of Win Probability Added divided by the leverage index for each play</td></tr>
-            <tr><td>SLG</td> <td>Slugging Percentage</td> <td>A number that indicates how well a player hits for extra base hits</td></tr>
-            <tr><td>SLGA</td> <td>Slugging Percentage Against</td> <td>A number that indicates how well players hit for extra base hits against a pitcher</td></tr>
-            <tr><td>SB%</td> <td>Stolen Base Percentage</td> <td>The percentage successful stolen bases that a player has on total stolen base attempts</td></tr>
-            <tr><td>SB</td> <td>Stolen Bases</td> <td>A base runner successfully reaches the next base without the batter putting the ball in play and no error occurs</td></tr>
-            <tr><td>SO%</td> <td>Strikeout Percentage</td> <td>The percentage of at bats that have resulted in a player striking out</td></tr>
-            <tr><td>SO</td> <td>Strikeouts</td> <td>A batter receives three strikes in a singular plate appearance and is out</td></tr>
-            <tr><td>SO/9</td> <td>Strikeouts per 9 Innings</td> <td>The number of strikeouts by a pitcher for every 9 innings</td></tr>
-            <tr><td>SO/W</td> <td>Strikeouts per Walk</td> <td>The number of strikeouts a player receives divided by the number of walks a player receives</td></tr>
-            <tr><td>TB</td> <td>Total Bases</td> <td>The total number of bases earned by a batter as a result of all of their base hits</td></tr>
-            <tr><td>FRAA</td> <td>Total Fielding Runs Above Average</td> <td>The number of runs above or below the average a player is worth based on the number of plays made</td></tr>
-            <tr><td>3B</td> <td>Triples</td> <td>A batter puts the ball in play and reaches third base without the help of an error or fielder's choice play</td></tr>
-            <tr><td>WHIP</td> <td>Walks and Hits Per Inning Pitched</td> <td>The total number of walks and hits allowed by a pitcher divided by the number of innings they pitched</td></tr>
-            <tr><td>WP</td> <td>Wild Pitches</td> <td>A pitch thrown far out of the strike zone that is not caught by a catcher and results in at least one base runner advancing</td></tr>
-            <tr><td>WPA+</td> <td>Win Probability Added</td> <td>The sum of the total positive events made by a player</td></tr>
-            <tr><td>WPAo</td> <td>Win Probability Added by Offensive Player</td> <td>The change in win probability cause by a batter during the game</td></tr>
-            <tr><td>WPAp</td> <td>Win Probability Added by Pitcher</td> <td>The change in win probability cause by a pitcher during the game</td></tr>
-            <tr><td>WPA-</td> <td>Win Probability Subtracted</td> <td>The sum of the total negative events made by a player</td></tr>
-            <tr><td>W%</td> <td>Winning Percentage</td> <td>The number of wins recorded divided by the total number of games</td></tr>
-            <tr><td>WAR</td> <td>Wins Above Replacement</td> <td>A measure of how valuable a player is over another who could replace them at the same position in terms of wins</td></tr>
+        <div class="search">
+            <input type="text" id="myInput" class="myInput" onkeyup="myFunction()" placeholder="Search by category, abbreviation, or name..">
+        </div>
+
+        <table id="myTable">
+            <thead>
+                <tr class="head">
+                    <th>Statistic Category</th>
+                    <th>Statistic Abbreviation</th>
+                    <th>Statistic Name</th>
+                    <th>Definition</th>
+                                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Advanced Pitching</td>
+                    <td>ERA+</td>
+                    <td>Adjusted Earned Run Average</td>
+                    <td>A normalized version of ERA that accounts for external factors like ballparks and opponents</td>
+                </tr>
+                <tr>
+                    <td>Standard Fielding</td>
+                    <td>A</td>
+                    <td>Assists</td>
+                    <td>Awarded to a defensive player who touches the ball prior to a runner being thrown out</td>
+                </tr>
+                <tr>
+                    <td>Batting</td>
+                    <td>AB</td>
+                    <td>At Bats</td>
+                    <td>A plate appearance that ends with a batter being out (except sacrifice plays) or ends with a player reaching a base by a hit, error, or fielder's choice</td>
+                </tr>
+                <tr>
+                    <td>Advanced Batting</td>
+                    <td>AB/HR</td>
+                    <td>At Bats per Home Run</td>
+                    <td>The number of at bats a player has divided by the number of home runs a player has hit</td>
+                </tr>
+                <tr>
+                    <td>Advanced Batting</td>
+                    <td>AB/RBI</td>
+                    <td>At Bats per Run Batted In</td>
+                    <td>The number of at bats a player has divided by the number RBIs that a player has</td>
+                </tr>
+                <tr>
+                    <td>Advanced Batting</td>
+                    <td>AB/SO</td>
+                    <td>At Bats per Strikeout</td>
+                    <td>The number of at bats a player has divided by the number times a player has struck out</td>
+                </tr>
+                <tr>
+                    <td>Sabermetric Batting and Sabermetric Pitching</td>
+                    <td>aLI</td>
+                    <td>Average Leverage Index</td>
+                    <td>The average pressure a batter or pitcher saw during the season</td>
+                </tr>
+                <tr>
+                    <td>Advanced Batting</td>
+                    <td>BIP%</td>
+                    <td>Balls In Play Percentage</td>
+                    <td>The percentage of at bats that have resulted in a player putting a ball in play</td>
+                </tr>
+                <tr>
+                    <td>Advanced Pitching</td>
+                    <td>BB/9</td>
+                    <td>Base on Balls per 9 Innings</td>
+                    <td>The number of bases on balls allowed by a pitcher for every 9 innings</td>
+                </tr>
+                <tr>
+                    <td>Standard Batting and Standard Pitching</td>
+                    <td>BB</td>
+                    <td>Bases on Balls/Walks</td>
+                    <td>A batter receives four balls in a singular plate appearance and is awarded first base</td>
+                </tr>
+                <tr>
+                    <td>Advanced Batting and Advanced Pitching</td>
+                    <td>BB%</td>
+                    <td>Bases On Balls Percentage</td>
+                    <td>The percentage of at bats that have resulted in a player receiving a strike out</td>
+                </tr>
+                <tr>
+                    <td>Advanced Pitching</td>
+                    <td>BAA</td>
+                    <td>Batted Average Against</td>
+                    <td>The number of hits allowed by a pitcher divided by the number of at-bats</td>
+                </tr>
+                <tr>
+                    <td>Sabermetric Pitching</td>
+                    <td>BAbipA</td>
+                    <td>Batted Average on Balls in Play Against</td>
+                    <td>The batting average allowed by a pitcher for balls that are put in play (excluding home runs, strikeouts, and sacrifice flies)</td>
+                </tr>
+                <tr>
+                    <td>Standard Pitching</td>
+                    <td>BF</td>
+                    <td>Batters Faced</td>
+                    <td>The number of plate appearances a pitcher has faced</td>
+                </tr>
+                <tr>
+                    <td>Standard Batting</td>
+                    <td>BA</td>
+                    <td>Batting Average</td>
+                    <td>The total number of hits by a player divided by the total number of at-bats</td>
+                </tr>
+                <tr>
+                    <td>Sabermetric Batting</td>
+                    <td>BAbip</td>
+                    <td>Batting Average on Balls In Play</td>
+                    <td>A player's batting average for balls that are put in play (excluding home runs, strikeouts, and sacrifice flies)</td>
+                </tr>
+                <tr>
+                    <td>Standard Batting</td>
+                    <td>CS</td>
+                    <td>Caught Stealing</td>
+                    <td>A base runner is thrown out in between pitches</td>
+                </tr>
+                <tr>
+                    <td>Standard Fielding and Pitching</td>
+                    <td>CG</td>
+                    <td>Complete Games</td>
+                    <td>A pitcher has thrown to every batter in a single game regardless of the length of a game</td>
+                </tr>
+                <tr>
+                    <td>Advanced Fielding</td>
+                    <td>DC</td>
+                    <td>Defensive Chances</td>
+                    <td>The number of opportunities that a player has to record an out</td>
+                </tr>
+                <tr>
+                    <td>Sabermetric Batting</td>
+                    <td>dWAR</td>
+                    <td>Defensive Wins Above Replacement</td>
+                    <td>A measure of how valuable a player is on defense over another who could replace them at the same position in terms of wins</td>
+                </tr>
+                <tr>
+                    <td>Teams</td>
+                    <td>N/A</td>
+                    <td>Division Outcome</td>
+                    <td>A team's rank in their division at the end of the season</td>
+                </tr>
+                <tr>
+                    <td>Standard Batting</td>
+                    <td>2B</td>
+                    <td>Doubles</td>
+                    <td>A batter puts the ball in play and reaches second base without the help of an error or fielder's choice play</td>
+                </tr>
+                <tr>
+                    <td>Standard Pitching</td>
+                    <td>ERA</td>
+                    <td>Earned Run Average</td>
+                    <td>The average number of earned runs for every 9 innings</td>
+                </tr>
+                <tr>
+                    <td>Standard Pitching</td>
+                    <td>ER</td>
+                    <td>Earned Runs</td>
+                    <td>The total number of runs given up by a pitcher without the assist of an error or passed ball</td>
+                </tr>
+                <tr>
+                    <td>Standard Fielding</td>
+                    <td>E</td>
+                    <td>Errors</td>
+                    <td>A defensive player fails to successfully make a play that an average fielder should be able to make</td>
+                </tr>
+                <tr>
+                    <td>Advanced Batting</td>
+                    <td>XBH%</td>
+                    <td>Extra Base Hit Percentage</td>
+                    <td>The percentage of at bats that have resulted in a player hitting and reaching second base, third base, and home plate</td>
+                </tr>
+                <tr>
+                    <td>Advanced Pitching</td>
+                    <td>XBHA%</td>
+                    <td>Extra Base Hit Percentage</td>
+                    <td>The percentage of at-bats that a pitcher has allowed a player to get a hit that results in the batter reaching second base, third base, and home plate</td>
+                </tr>
+                <tr>
+                    <td>Sabermetric Pitching</td>
+                    <td>FIP</td>
+                    <td>Fielding Independent Pitching</td>
+                    <td>Measures the plays that the pitcher has the most control over (strikeouts, unintentional walks, hit-by-pitches, and home runs)</td>
+                </tr>
+                <tr>
+                    <td>Advanced Fielding</td>
+                    <td>Fld%</td>
+                    <td>Fielding Percentage</td>
+                    <td>The number of putouts and assists a defensive player has divided by the total number of defensive chances a player has</td>
+                </tr>
+                <tr>
+                    <td>Standard Pitching</td>
+                    <td>GF</td>
+                    <td>Games Finished</td>
+                    <td>A relief pitcher who threw the final pitch of the game for their team</td>
+                </tr>
+                <tr>
+                    <td>All</td>
+                    <td>GP</td>
+                    <td>Games played</td>
+                    <td>The number of games that a player has entered a game at any point</td>
+                </tr>
+                <tr>
+                    <td>Standard Fielding and Pitching</td>
+                    <td>GS</td>
+                    <td>Games Started</td>
+                    <td>The number of games that a player has thrown the first pitch for their team</td>
+                </tr>
+                <tr>
+                    <td>Standard Batting</td>
+                    <td>H</td>
+                    <td>Hits</td>
+                    <td>A batter puts the ball in play and reaches at least first base safely without the help of an error or fielder's choice play</td>
+                </tr>
+                <tr>
+                    <td>Standard Pitching</td>
+                    <td>HA</td>
+                    <td>Hits allowed</td>
+                    <td>The total number of hits given up by a pitcher</td>
+                </tr>
+                <tr>
+                    <td>Advanced Pitching</td>
+                    <td>H/9</td>
+                    <td>Hits per 9 innings</td>
+                    <td>The number of hits allowed by a pitcher for every 9 innings</td>
+                </tr>
+                <tr>
+                    <td>Advanced Batting and Advanced Pitching</td>
+                    <td>HR%</td>
+                    <td>Home Run Percentage</td>
+                    <td>The percentage of at bats that have resulted in a player hitting a home run</td>
+                </tr>
+                <tr>
+                    <td>Standard Batting</td>
+                    <td>HR</td>
+                    <td>Home Runs</td>
+                    <td>A batter puts a ball in play and reaches home plate safely without the help of an error or fielder's choice play</td>
+                </tr>
+                <tr>
+                    <td>Standard Pitching</td>
+                    <td>HRA</td>
+                    <td>Home Runs Allowed</td>
+                    <td>The total number of home runs given up by a pitcher</td>
+                </tr>
+                <tr>
+                    <td>Advanced Pitching</td>
+                    <td>HR/9</td>
+                    <td>Home Runs per 9 Innings</td>
+                    <td>The number of home runs allowed by a pitcher for every 9 innings</td>
+                </tr>
+                <tr>
+                    <td>Fileding and Standard Pitching</td>
+                    <td>IP</td>
+                    <td>Innings played</td>
+                    <td>The number of innings that a pitcher has thrown in thirds (each out is a third of an inning)</td>
+                </tr>
+                <tr>
+                    <td>Advanced Batting</td>
+                    <td>ISO</td>
+                    <td>Isolated Power</td>
+                    <td>An indicator of how often a player hits for extra bases</td>
+                </tr>
+                <tr>
+                    <td>Advanced Batting</td>
+                    <td>LD%</td>
+                    <td>Line Drive Percentage</td>
+                    <td>The percentage of balls put into play that are line drives</td>
+                </tr>
+                <tr>
+                    <td>All</td>
+                    <td>N/R</td>
+                    <td>Not Recorded</td>
+                    <td>This indicates that a statistic was not recorded for a player</td>
+                </tr>
+                <tr>
+                    <td>Sabermetric Batting</td>
+                    <td>oRAR</td>
+                    <td>Offensive Runs Above Replacement</td>
+                    <td>A measure of how many runs a player contributes offensively compared to another who could replace them at the same position</td>
+                </tr>
+                <tr>
+                    <td>Sabermetric Batting</td>
+                    <td>oWAR</td>
+                    <td>Offensive Wins Above Replacement</td>
+                    <td>A measure of how valuable a player is on offense over another who could replace them at the same position in terms of wins</td>
+                </tr>
+                <tr>
+                    <td>Advanced Batting</td>
+                    <td>OBP</td>
+                    <td>On-Base Percentage</td>
+                    <td>The total number of hits, walks, and hit-by-pitches divided by the total number of plate appearances</td>
+                </tr>
+                <tr>
+                    <td>Advanced Pitching</td>
+                    <td>OBPA</td>
+                    <td>On-Base Percentage Against</td>
+                    <td>The total number of hits, walks, and hit-by-pitches allowed by a pitcher divided by the total number of plate appearances</td>
+                </tr>
+                <tr>
+                    <td>Advanced Batting</td>
+                    <td>OPS</td>
+                    <td>On-base Percentage Plus Slugging Percentage</td>
+                    <td>A number that indicates how well a player can safely reach base and hit for power</td>
+                </tr>
+                <tr>
+                    <td>Advanced Pitching</td>
+                    <td>OPSA</td>
+                    <td>On-base Percentage Plus Slugging Percentage Against</td>
+                    <td>A number that indicates how well players safely reach base and hit for power against a pitcher</td>
+                </tr>
+                <tr>
+                    <td>Sabermetric Batting</td>
+                    <td>OPS+</td>
+                    <td>On-base Percentage Plus Slugging Percentage Plus</td>
+                    <td>A number used to normalize a player's On Base Percentage across all batters in the league</td>
+                </tr>
+                <tr>
+                    <td>Standard Batting</td>
+                    <td>O</td>
+                    <td>Outs</td>
+                    <td>Recorded when an offensive player is retired by the defense</td>
+                </tr>
+                <tr>
+                    <td>Teams</td>
+                    <td>N/A</td>
+                    <td>Payroll</td>
+                    <td>The amount of money spent by a team on their roster in a season</td>
+                </tr>
+                <tr>
+                    <td>Batting</td>
+                    <td>PA</td>
+                    <td>Plate Appearances</td>
+                    <td>Each completed turn batting regardless of the outcome</td>
+                </tr>
+                <tr>
+                    <td>Sabermetric Batting</td>
+                    <td>rOBA</td>
+                    <td>Player Total Offensive Contributions</td>
+                    <td>A measure of a player's total offensive contributions per plate appearance</td>
+                </tr>
+                <tr>
+                    <td>Sabermetric Batting and Sabermetric Pitching</td>
+                    <td>P</td>
+                    <td>Plays Included in Win Probability Added</td>
+                    <td>The number of plays that are included in the calculation of Win Probability Added</td>
+                </tr>
+                <tr>
+                    <td>Standard Batting and Fielding</td>
+                    <td>Pos</td>
+                    <td>Position(s)</td>
+                    <td>The position(s) that a player plays</td>
+                </tr>
+                <tr>
+                    <td>Standard Fielding</td>
+                    <td>PO</td>
+                    <td>Putouts</td>
+                    <td>The fielder who is holding the ball when an out is made is credited in it</td>
+                </tr>
+                <tr>
+                    <td>Advanced Fielding</td>
+                    <td>RF/9</td>
+                    <td>Range Factor per 9 Innings</td>
+                    <td>An estimate on how much field a player can cover by looking at how many plays a player can make for every 9 innings</td>
+                </tr>
+                <tr>
+                    <td>Advanced Fielding</td>
+                    <td>RF/G</td>
+                    <td>Range Factor per game</td>
+                    <td>An estimate on how much field a player can cover by looking at how many plays a player can make for every 9 innings</td>
+                </tr>
+                <tr>
+                    <td>Advanced Batting</td>
+                    <td>RS%</td>
+                    <td>Run Scoring Percentage</td>
+                    <td>The percentage of times that a base runner eventually scores a run</td>
+                </tr>
+                <tr>
+                    <td>Standard Batting</td>
+                    <td>R</td>
+                    <td>Runs</td>
+                    <td>A base runner touches home plate safely</td>
+                </tr>
+                <tr>
+                    <td>Sabermetric Batting</td>
+                    <td>RAA</td>
+                    <td>Runs Above Average</td>
+                    <td>A measure of how may runs a player contributes</td>
+                </tr>
+                <tr>
+                    <td>Sabermetric Batting and Sabermetric Pitching</td>
+                    <td>RAR</td>
+                    <td>Runs Above Replacement</td>
+                    <td>A measure of how many runs a player contributes compared to another who could replace them at the same position</td>
+                </tr>
+                <tr>
+                    <td>Standard Pitching</td>
+                    <td>RA</td>
+                    <td>Runs allowed</td>
+                    <td>The total number of runs given up by a pitcher</td>
+                </tr>
+                <tr>
+                    <td>Standard Batting</td>
+                    <td>RBI</td>
+                    <td>Runs Batted In</td>
+                    <td>A batter receives an RBI for each runner that reaches home plate after the ball is in play (not counted if the batter becomes out or there is an error)</td>
+                </tr>
+                <tr>
+                    <td>Advanced Batting</td>
+                    <td>RC</td>
+                    <td>Runs Created</td>
+                    <td>The offensive contribution that a player has made to their team</td>
+                </tr>
+                <tr>
+                    <td>Advanced Batting</td>
+                    <td>RC/G</td>
+                    <td>Runs Created per game</td>
+                    <td>The offensive contribution that a player has made to their team per game</td>
+                </tr>
+                <tr>
+                    <td>Standard Pitching</td>
+                    <td>SV</td>
+                    <td>Saves</td>
+                    <td>Credited to the final relief pitcher for the winning team who entered the game during a Save Opportunity</td>
+                </tr>
+                <tr>
+                    <td>Teams</td>
+                    <td>N/A</td>
+                    <td>Season Outcome</td>
+                    <td>The state of the season that a team's season has ended</td>
+                </tr>
+                <tr>
+                    <td>Standard Pitching</td>
+                    <td>SHO</td>
+                    <td>Shutouts</td>
+                    <td>A pitcher that throws an entire game and does not give up a run to the opposing team</td>
+                </tr>
+                <tr>
+                    <td>Sabermetric Batting and Sabermetric Pitching</td>
+                    <td>WPA/LI</td>
+                    <td>Situational Wins</td>
+                    <td>The sum of Win Probability Added divided by the leverage index for each play</td>
+                </tr>
+                <tr>
+                    <td>Advanced Batting</td>
+                    <td>SLG</td>
+                    <td>Slugging Percentage</td>
+                    <td>A number that indicates how well a player hits for extra base hits</td>
+                </tr>
+                <tr>
+                    <td>Advanced Pitching</td>
+                    <td>SLGA</td>
+                    <td>Slugging Percentage Against</td>
+                    <td>A number that indicates how well players hit for extra base hits against a pitcher</td>
+                </tr>
+                <tr>
+                    <td>Advanced Batting</td>
+                    <td>SB%</td>
+                    <td>Stolen Base Percentage</td>
+                    <td>The percentage successful stolen bases that a player has on total stolen base attempts</td>
+                </tr>
+                <tr>
+                    <td>Standard Batting</td>
+                    <td>SB</td>
+                    <td>Stolen Bases</td>
+                    <td>A base runner successfully reaches the next base without the batter putting the ball in play and no error occurs</td>
+                </tr>
+                <tr>
+                    <td>Advanced Batting and Advanced Pitching</td>
+                    <td>SO%</td>
+                    <td>Strikeout Percentage</td>
+                    <td>The percentage of at bats that have resulted in a player striking out</td>
+                </tr>
+                <tr>
+                    <td>Standard Batting and Standard Pitching</td>
+                    <td>SO</td>
+                    <td>Strikeouts</td>
+                    <td>A batter receives three strikes in a singular plate appearance and is out</td>
+                </tr>
+                <tr>
+                    <td>Advanced Pitching</td>
+                    <td>SO/9</td>
+                    <td>Strikeouts per 9 Innings</td>
+                    <td>The number of strikeouts by a pitcher for every 9 innings</td>
+                </tr>
+                <tr>
+                    <td>Advanced Batting and Advanced Pitching</td>
+                    <td>SO/W</td>
+                    <td>Strikeouts per Walk</td>
+                    <td>The number of strikeouts a player receives divided by the number of walks a player receives</td>
+                </tr>
+                <tr>
+                    <td>Standard Batting</td>
+                    <td>TB</td>
+                    <td>Total Bases</td>
+                    <td>The total number of bases earned by a batter as a result of all of their base hits</td>
+                </tr>
+                <tr>
+                    <td>Advanced Fielding</td>
+                    <td>FRAA</td>
+                    <td>Total Fielding Runs Above Average</td>
+                    <td>The number of runs above or below the average a player is worth based on the number of plays made</td>
+                </tr>
+                <tr>
+                    <td>Standard Batting</td>
+                    <td>3B</td>
+                    <td>Triples</td>
+                    <td>A batter puts the ball in play and reaches third base without the help of an error or fielder's choice play</td>
+                </tr>
+                <tr>
+                    <td>Advanced Pitching</td>
+                    <td>WHIP</td>
+                    <td>Walks and Hits Per Inning Pitched</td>
+                    <td>The total number of walks and hits allowed by a pitcher divided by the number of innings they pitched</td>
+                </tr>
+                <tr>
+                    <td>Standard Pitching</td>
+                    <td>WP</td>
+                    <td>Wild Pitches</td>
+                    <td>A pitch thrown far out of the strike zone that is not caught by a catcher and results in at least one base runner advancing</td>
+                </tr>
+                <tr>
+                    <td>Sabermetric Batting and Sabermetric Pitching</td>
+                    <td>WPA+</td>
+                    <td>Win Probability Added</td>
+                    <td>The sum of the total positive events made by a player</td>
+                </tr>
+                <tr>
+                    <td>Sabermetric Batting</td>
+                    <td>WPAo</td>
+                    <td>Win Probability Added by Offensive Player</td>
+                    <td>The change in win probability cause by a batter during the game</td>
+                </tr>
+                <tr>
+                    <td>Sabermetric Pitching</td>
+                    <td>WPAp</td>
+                    <td>Win Probability Added by Pitcher</td>
+                    <td>The change in win probability cause by a pitcher during the game</td>
+                </tr>
+                <tr>
+                    <td>Sabermetric Batting and Sabermetric Pitching</td>
+                    <td>WPA-</td>
+                    <td>Win Probability Subtracted</td>
+                    <td>The sum of the total negative events made by a player</td>
+                </tr>
+                <tr>
+                    <td>Standard Pitching and Teams</td>
+                    <td>W%</td>
+                    <td>Winning Percentage</td>
+                    <td>The number of wins recorded divided by the total number of games</td>
+                </tr>
+                <tr>
+                    <td>Sabermetric Batting and Sabermetric Pitching</td>
+                    <td>WAR</td>
+                    <td>Wins Above Replacement</td>
+                    <td>A measure of how valuable a player is over another who could replace them at the same position in terms of wins</td>
+                </tr>
+            </tbody>
         </table>
+
+        <script>
+            function myFunction() {
+                var input, filter, table, tr, td, i, txtValue;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("myTable");
+                tr = table.getElementsByTagName("tr");
+                
+                for (i = 1; i < tr.length; i++) {
+                    alltags = tr[i].getElementsByTagName("td");
+                    isFound = false;
+                    for(j=0; j< alltags.length; j++) {
+                    td = alltags[j];
+                    
+                        if (td) {
+                        txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                                j = alltags.length;
+                                isFound = true;
+                            }
+                        }       
+                    }
+                    if(!isFound && tr[i].className !== "head") {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
 
         <div class="credit">
             *These definitions were provided by <a href="https://baseballtrainingworld.com/baseball-stats-101-a-complete-glossary-of-baseball-statistics/#Fielding_Independent_Pitching_FIP" target="_blank">Baseball Training World</a> and <a href="https://www.baseball-reference.com/bullpen/Baseball_statistics" target="_blank">Baseball Reference</a>

@@ -27,7 +27,7 @@
 
     <div class="main">
         <div class="search">
-            <input type="text" id="myInput" class="myInput" onkeyup="myFunction()" placeholder="Search by team name..">
+            <input type="text" id="myInput" class="myInput" onkeyup="myFunction()" placeholder="Search by any column..">
         </div>
 
         <div class="filter">
@@ -2427,7 +2427,7 @@
                             }
                         }       
                     }
-                    if(!isFound && tr[i].className !== "header") {
+                    if(!isFound && tr[i].className !== "head") {
                         tr[i].style.display = "none";
                     }
                 }
