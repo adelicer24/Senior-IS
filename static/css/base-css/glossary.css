@@ -6,29 +6,24 @@
 }
 
 .category {
-    width: 13%;
+    width: 80%;
     font-size: 14px;
     padding: 12px 20px 12px 10px;
     border: 1px solid #ddd;
-    margin-bottom: 12px;
-    margin-right: 2px;
 }
 
 .abbreviation {
-    width: 13%;
+    width: 80%;
     font-size: 14px;
     padding: 12px 20px 12px 10px;
     border: 1px solid #ddd;
-    margin-bottom: 12px;
-    margin-right: 2px;
 }
 
 .name {
-    width: 13%;
+    width: 80%;
     font-size: 14px;
     padding: 12px 20px 12px 10px;
     border: 1px solid #ddd;
-    margin-bottom: 12px;
 }
 
 .search {

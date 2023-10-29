@@ -26,19 +26,24 @@
     </h1>
 
     <div class="main">
-        <div class="search">
-            <input type="text" id="year" class="year" onkeyup="search()" placeholder="Year..">
-            <input type="text" id="team" class="team" onkeyup="search()" placeholder="Team..">
-            <input type="text" id="division" class="division" onkeyup="search()" placeholder="Division..">
-            <input type="text" id="league" class="league" onkeyup="search()" placeholder="League..">
-            <input type="text" id="dvout" class="dvout" onkeyup="search()" placeholder="Division outcome..">
-            <input type="text" id="snout" class="snout" onkeyup="search()" placeholder="Season outcome..">
-        </div>
 
         <table id="myTable">
             <thead>
+                <tr>
+                    <th><input type="text" id="year" class="year" onkeyup="search()" placeholder="Year.."></th>
+                    <th><input type="text" id="team" class="team" onkeyup="search()" placeholder="Team.."></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><input type="text" id="division" class="division" onkeyup="search()" placeholder="Division.."></th>
+                    <th><input type="text" id="league" class="league" onkeyup="search()" placeholder="League.."></th>
+                    <th><input type="text" id="dvout" class="dvout" onkeyup="search()" placeholder="Division outcome.."></th>
+                    <th><input type="text" id="snout" class="snout" onkeyup="search()" placeholder="Season outcome.."></th>
+                    <th></th>
+                </tr>
                 <tr class="head">
-                    <th style="width: 3%;">Year</th>
+                    <th style="width: 4%;">Year</th>
                     <th style="width: 7%;">Team Name</th>
                     <th style="width: 3%;">Team Abbreviation</th>
                     <th style="width: 3%;">Wins</th>
@@ -2415,7 +2420,7 @@
                 table = document.getElementById("myTable");
                 tr = table.getElementsByTagName("tr");
                 
-                for (i = 1; i < tr.length; i++) {
+                for (i = 2; i < tr.length; i++) {
                     td_year = tr[i].getElementsByTagName("td")[0];
                     td_team = tr[i].getElementsByTagName("td")[1];
                     td_division = tr[i].getElementsByTagName("td")[6];

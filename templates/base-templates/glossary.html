@@ -13,14 +13,16 @@
     </h1>
 
     <div class="main">
-        <div class="search">
-            <input type="text" id="category" class="category" onkeyup="search()" placeholder="Search by category...">
-            <input type="text" id="abbreviation" class="abbreviation" onkeyup="search()" placeholder="Search by abbreviation...">
-            <input type="text" id="name" class="name" onkeyup="search()" placeholder="Search by name...">
-        </div>
+
 
         <table id="myTable">
             <thead>
+                <tr>
+                    <th><input type="text" id="category" class="category" onkeyup="search()" placeholder="Search by category..."></th>
+                    <th><input type="text" id="abbreviation" class="abbreviation" onkeyup="search()" placeholder="Search by abbreviation..."></th>
+                    <th><input type="text" id="name" class="name" onkeyup="search()" placeholder="Search by name..."></th>
+                    <th></th>
+                </tr>
                 <tr class="head">
                     <th style="width: 15%;">Statistic Category</th>
                     <th style="width: 15%;">Statistic Abbreviation</th>
@@ -586,7 +588,7 @@
                 table = document.getElementById("myTable");
                 tr = table.getElementsByTagName("tr");
                 
-                for (i = 1; i < tr.length; i++) {
+                for (i = 2; i < tr.length; i++) {
                     td_category = tr[i].getElementsByTagName("td")[0];
                     td_abb = tr[i].getElementsByTagName("td")[1];
                     td_name = tr[i].getElementsByTagName("td")[2];

@@ -6,55 +6,45 @@
 }
 
 .year {
-    width: 2.5%;
+    width: 50%;
     font-size: 11px;
     padding: 12px 20px 12px 10px;
     border: 1px solid #ddd;
-    margin-bottom: 12px;
-    margin-right: 2px;
 }
 
 .team {
-    width: 8.7%;
+    width: 75%;
     font-size: 11px;
     padding: 12px 20px 12px 10px;
     border: 1px solid #ddd;
-    margin-bottom: 12px;
-    margin-right: 485px;
 }
 
 .division {
-    width: 6.3%;
+    width: 70%;
     font-size: 11px;
     padding: 12px 20px 12px 10px;
     border: 1px solid #ddd;
-    margin-bottom: 12px;
-    margin-right: 2px;
 }
 
 .league {
-    width: 5.8%;
+    width: 70%;
     font-size: 11px;
     padding: 12px 20px 12px 10px;
     border: 1px solid #ddd;
-    margin-bottom: 12px;
 }
 
 .dvout {
-    width: 6.2%;
+    width: 70%;
     font-size: 11px;
     padding: 12px 20px 12px 10px;
     border: 1px solid #ddd;
-    margin-bottom: 12px;
-    margin-right: 2px;
 }
 
 .snout {
-    width: 11.3%;
+    width: 80%;
     font-size: 11px;
     padding: 12px 20px 12px 10px;
     border: 1px solid #ddd;
-    margin-bottom: 12px;
 }
 
 .search {

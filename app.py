@@ -29,3 +29,6 @@ def teams():
 @app.route("/statistics-awards")
 def awards():
     return render_template("stat-templates/awards.html")
+
+#Next job: Fill in statistics.html with info of what stats are displayed under each category
+#Then create a single batting, fielding, and pitching page
