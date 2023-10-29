@@ -3,45 +3,26 @@
     padding-bottom: 3%;
     padding-left: 2%;
     padding-right: 2%;
+    overflow-x: auto;
+    display: block;
 }
 
 .year {
-    width: 50%;
+    width: 55%;
+    font-size: 11px;
+    padding: 12px 20px 12px 10px;
+    border: 1px solid #ddd;
+}
+
+.name {
+    width: 80%;
     font-size: 11px;
     padding: 12px 20px 12px 10px;
     border: 1px solid #ddd;
 }
 
 .team {
-    width: 75%;
-    font-size: 11px;
-    padding: 12px 20px 12px 10px;
-    border: 1px solid #ddd;
-}
-
-.division {
-    width: 70%;
-    font-size: 11px;
-    padding: 12px 20px 12px 10px;
-    border: 1px solid #ddd;
-}
-
-.league {
-    width: 70%;
-    font-size: 11px;
-    padding: 12px 20px 12px 10px;
-    border: 1px solid #ddd;
-}
-
-.dvout {
-    width: 70%;
-    font-size: 11px;
-    padding: 12px 20px 12px 10px;
-    border: 1px solid #ddd;
-}
-
-.snout {
-    width: 80%;
+    width: 60%;
     font-size: 11px;
     padding: 12px 20px 12px 10px;
     border: 1px solid #ddd;
@@ -49,7 +30,7 @@
 
 table {
     border: 2px solid black;
-    width: 100%;
+    width: 150%;
     border-collapse: collapse;
     position: relative;
 }
@@ -59,7 +40,7 @@ th {
     border: 2px solid black;
     padding: 0.25%;
     text-align: left;
-    font-size:x-large;
+    font-size:large;
     font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -69,7 +50,7 @@ td {
     border: 2px solid black;
     padding: 0.5%;
     height: 50px;
-    font-size: large;
+    font-size: medium;
     font-family:Arial, Helvetica, sans-serif;
 }
 
