@@ -1,7 +1,7 @@
 from prettytable import PrettyTable
 
 # open csv file
-a = open("mlb_data/Fielding_Advanced_2018-2023.csv", 'r')
+a = open("mlb_data/.csv", 'r')
  
 # read the csv file
 a = a.readlines()
@@ -18,5 +18,5 @@ for i in range(1, len(a)) :
     t.add_row(a[i].split(','))
  
 code = t.get_html_string()
-html_file = open('fielding2.html', 'w')
+html_file = open('.html', 'w')
 html_file = html_file.write(code)
