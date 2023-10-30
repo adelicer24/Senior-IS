@@ -24,6 +24,7 @@
     text-decoration: none;
     padding: 10px;
     margin-right: 5px;
+    border: 2px solid black;
 }
 
 .header a:hover {
@@ -35,6 +36,7 @@
     background-color: white;
     color: black;
     cursor: not-allowed;
+    border: 3px solid black;
 }
 
 .h1 {

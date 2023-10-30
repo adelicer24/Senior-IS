@@ -85,6 +85,7 @@ td {
     text-decoration: none;
     padding: 10px;
     margin-right: 25px;
+    border: 2px solid black;
 }
 
 .buttons2 {
@@ -109,18 +110,7 @@ td {
     background-color: white;
     color: black;
     cursor: not-allowed;
-}
-
-.buttons3 a {
-    position: relative;
-    background-color: black;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    padding: 10px;
+    border: 3px solid black;
 }
 
 .buttons3 a {
@@ -134,6 +124,7 @@ td {
     text-decoration: none;
     padding: 10px;
     margin-right: 10px;
+    border: 2px solid black;
 }
 
 .buttons3 {
@@ -154,4 +145,5 @@ td {
     background-color: gray;
     color: black;
     cursor: not-allowed;
+    border: 2px solid black;
 }

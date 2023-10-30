@@ -106,6 +106,7 @@ td {
     text-decoration: none;
     padding: 10px;
     margin-right: 25px;
+    border: 2px solid black;
 }
 
 .buttons2 {
@@ -119,6 +120,7 @@ td {
     border-bottom: 3px;
     border-bottom-style: solid;
     border-color: black;
+    border: 2px solid black;
 }
 
 .buttons2 a:hover {
@@ -130,4 +132,5 @@ td {
     background-color: white;
     color: black;
     cursor: not-allowed;
+    border: 3px solid black;
 }

@@ -60,7 +60,6 @@ td {
     width: 100%;
     left: 0;
     bottom: 0;
-    position: fixed;
     background-color: crimson;
     color: black;
     font-size: large;
@@ -83,6 +82,7 @@ td {
     text-decoration: none;
     padding: 10px;
     margin-right: 25px;
+    border: 2px solid black;
 }
 
 .buttons2 {
@@ -107,4 +107,5 @@ td {
     background-color: white;
     color: black;
     cursor: not-allowed;
+    border: 3px solid black;
 }
