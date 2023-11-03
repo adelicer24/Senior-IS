@@ -34,10 +34,10 @@ GS: Games Started
 IP: Innings played
 WHIP: Walks and Hits Per Inning Pitched
 ERA+: Earned Runs Average Plus
-BAA: Batted Average Against
-OBPA: On-Base Percentage Against
-SLGA: Slugging Percentage Against
-OPSA: On-base Percentage Plus Slugging Percentage Against
+BAA: Batting Average Allowed
+OBPA: On-Base Percentage Allowed
+SLGA: Slugging Percentage Allowed
+OPSA: On-base Percentage Plus Slugging Percentage Allowed
 H/9: Hits per 9 innings
 HR/9: Home Runs per 9 Innings
 BB/9: Base on Balls per 9 Innings
@@ -46,7 +46,7 @@ SO/W: Strikeout to Walk Ratio
 HR%: Home Run Percentage
 SO%: Strikeout Percentage
 BB%: Base on Balls Percentage
-XBHA%: Extra Base Hit Against Percentage
+XBH%: Extra Base Hit Percentage
 
 
 Sabermetrics
@@ -60,7 +60,7 @@ IP: Innings played
 FIP: Fielding Independent Pitching
 WAR: Wins Above Replacement
 RAR: Runs Above Replacement
-BAbipA: Batted Average on Balls in Play Against
+BAbipA: Batting Average on Balls in Play Allowed
 P: Plays Included in Win Probability Added
 WPAp: Win Probability Added by Pitcher
 WPA+: Win Probability Added
