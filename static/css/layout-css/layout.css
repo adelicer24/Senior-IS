@@ -1,7 +1,6 @@
 .header {
     display: flex;
     overflow: hidden;
-    position: relative;
     height: 70px;
     background-color: crimson;
     border-bottom: 3px;

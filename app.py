@@ -225,5 +225,3 @@ def teams():
 @app.route("/statistics-battingstd2018alt")
 def battingstd2018alt():
     return render_template("stat-templates/2018/batting-std2018alt.html")
-
-#Next job: Fill in statistics.html with info of what stats are displayed under each category

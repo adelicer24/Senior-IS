@@ -7,6 +7,10 @@
     display: block;
 }
 
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .year {
     width: 55%;
     font-size: 11px;

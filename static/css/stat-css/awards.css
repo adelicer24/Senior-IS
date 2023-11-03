@@ -6,6 +6,10 @@
     display: block;
 }
 
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .filter {
     float: left;
 }
