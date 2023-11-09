@@ -15,7 +15,12 @@
     <div class="main">
         <table id="myTable">
             <thead>
-                <tr><th><input type="text" id="category" class="category" onkeyup="search()" placeholder="Search by category..."></th><th><input type="text" id="abbreviation" class="abbreviation" onkeyup="search()" placeholder="Search by abbreviation..."></th><th><input type="text" id="name" class="name" onkeyup="search()" placeholder="Search by name..."></th><th></th></tr>
+                <tr>
+                    <th><input type="text" id="category" class="category" onkeyup="search()" placeholder="Search by category..."></th>
+                    <th><input type="text" id="abbreviation" class="abbreviation" onkeyup="search()" placeholder="Search by abbreviation..."></th>
+                    <th><input type="text" id="name" class="name" onkeyup="search()" placeholder="Search by name..."></th>
+                    <th></th>
+                </tr>
                 <tr class="head"><th style="width: 15%;">Statistic Category</th><th style="width: 15%;">Statistic Abbreviation</th><th style="width: 15%;">Statistic Name</th><th style="width: 40%;">Definition</th></tr>
             </thead>
             <tbody>
@@ -125,9 +130,23 @@
                 table = document.getElementById("myTable");
                 tr = table.getElementsByTagName("tr");
                 
-                for (i = 2; i < tr.length; i++) {td_category = tr[i].getElementsByTagName("td")[0];td_abb = tr[i].getElementsByTagName("td")[1];td_name = tr[i].getElementsByTagName("td")[2];
-if (td_category && td_abb && td_name){    txtValue_category = td_category.textContent || td_category.innerText;    txtValue_abb = td_abb.textContent || td_abb.innerText;    txtValue_name = td_name.textContent || td_name.innerText;
-    if (txtValue_category.toUpperCase().indexOf(filter_category) > -1        && txtValue_abb.toUpperCase().indexOf(filter_abb) > -1        &&txtValue_name.toUpperCase().indexOf(filter_name) > -1) {        tr[i].style.display="";    }    else {        tr[i].style.display = "none";    }}
+                for (i = 2; i < tr.length; i++) {
+                    td_category = tr[i].getElementsByTagName("td")[0];
+                    td_abb = tr[i].getElementsByTagName("td")[1];
+                    td_name = tr[i].getElementsByTagName("td")[2];
+                    if (td_category && td_abb && td_name) {
+                        txtValue_category = td_category.textContent || td_category.innerText;
+                        txtValue_abb = td_abb.textContent || td_abb.innerText;
+                        txtValue_name = td_name.textContent || td_name.innerText;
+                        if (txtValue_category.toUpperCase().indexOf(filter_category) > -1
+                            && txtValue_abb.toUpperCase().indexOf(filter_abb) > -1
+                            &&txtValue_name.toUpperCase().indexOf(filter_name) > -1) {
+                                tr[i].style.display="";
+                        }
+                        else {
+                            tr[i].style.display = "none";
+                        }
+                    }
                 }
             }
         </script>
