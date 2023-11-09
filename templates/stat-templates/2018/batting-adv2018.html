@@ -37,69 +37,78 @@
     </div>
 
     <div class="main">
-        <table id="myTable">
+        <div class="filters">
+            <label class="caption" for="name">Search for player: </label>
+            <input type="text" id="name" class="name" onkeyup="search()" placeholder="Name..">
+            
+            <label class="caption" for="team">Filter By Team: </label>
+            <select id="team" class="team" onchange="search()">
+                <option value="all">All</option>
+                <option value="ARI">Arizona Diamondbacks</option>
+                <option value="ATL">Atlanta Braves</option>
+                <option value="BAL">Baltimore Orioles</option>
+                <option value="BOS">Boston Red Sox</option>
+                <option value="CHC">Chicago Cubs</option>
+                <option value="CHW">Chicago White Sox</option>
+                <option value="CIN">Cincinnati Reds</option>
+                <option value="CLE">Cleveland Guardians</option>
+                <option value="COL">Colorado Rockies</option>
+                <option value="DET">Detroit Tigers</option>
+                <option value="HOU">Houston Astros</option>
+                <option value="KCR">Kansas City Royals</option>
+                <option value="LAA">Los Angeles Angels</option>
+                <option value="LAD">Los Angeles Dodgers</option>
+                <option value="MIA">Miami Marlins</option>
+                <option value="MIL">Milwaukee Brewers</option>
+                <option value="MIN">Minnesota Twins</option>
+                <option value="NYM">New York Mets</option>
+                <option value="NYY">New York Yankees</option>
+                <option value="OAK">Oakland Athletics</option>
+                <option value="PHI">Philadelphia Phillies</option>
+                <option value="PIT">Pittsburgh Pirates</option>
+                <option value="SDP">San Diego Padres</option>
+                <option value="SFG">San Francisco Giants</option>
+                <option value="SEA">Seattle Mariners</option>
+                <option value="STL">St. Louis Cardinals</option>
+                <option value="TBR">Tampa Bay Rays</option>
+                <option value="TEX">Texas Rangers</option>
+                <option value="TOR">Toronto Blue Jays</option>
+                <option value="WSN">Washington Nationals</option>
+                <option value="TOT">Multiple Teams Played For</option>
+            </select>
+        </div>
+
+        <script>
+            function search() {
+                var name = document.getElementById("name");
+                var team = document.getElementById("team");
+
+                var filter_name = name.value.toUpperCase();
+                var filter_team = team.value;
+
+                var table = document.getElementById("myTable");
+                var rows = table.getElementsByTagName("tr");
+               
+                for (var i=1; i<rows.length; i++) {
+                    row=rows[i];
+                    name=row.cells[0].textContent.trim();
+                    team=row.cells[2].textContent.trim();
+
+
+                    if ((name.toUpperCase().indexOf(filter_name) > -1 && filter_team==="all")
+                        || (name.toUpperCase().indexOf(filter_name) > -1 && team===filter_team)){
+                        row.style.display="";
+                    }
+                    else {
+                        row.style.display = "none";
+                    }
+                }
+            }
+       </script>
+
+        <table id="myTable" class="sortable">
             <thead>
-                <tr>
-                    <th><input type="text" id="name" class="name" onkeyup="search()" placeholder="Name.."></th>
-                    <th></th>
-                    <th>
-                        <select id="team" class="team" onchange="search()">
-                            <option value="all">All</option>
-                            <option value="ARI">Arizona Diamondbacks</option>
-                            <option value="ATL">Atlanta Braves</option>
-                            <option value="BAL">Baltimore Orioles</option>
-                            <option value="BOS">Boston Red Sox</option>
-                            <option value="CHC">Chicago Cubs</option>
-                            <option value="CHW">Chicago White Sox</option>
-                            <option value="CIN">Cincinnati Reds</option>
-                            <option value="CLE">Cleveland Guardians</option>
-                            <option value="COL">Colorado Rockies</option>
-                            <option value="DET">Detroit Tigers</option>
-                            <option value="HOU">Houston Astros</option>
-                            <option value="KCR">Kansas City Royals</option>
-                            <option value="LAA">Los Angeles Angels</option>
-                            <option value="LAD">Los Angeles Dodgers</option>
-                            <option value="MIA">Miami Marlins</option>
-                            <option value="MIL">Milwaukee Brewers</option>
-                            <option value="MIN">Minnesota Twins</option>
-                            <option value="NYM">New York Mets</option>
-                            <option value="NYY">New York Yankees</option>
-                            <option value="OAK">Oakland Athletics</option>
-                            <option value="PHI">Philadelphia Phillies</option>
-                            <option value="PIT">Pittsburgh Pirates</option>
-                            <option value="SDP">San Diego Padres</option>
-                            <option value="SFG">San Francisco Giants</option>
-                            <option value="SEA">Seattle Mariners</option>
-                            <option value="STL">St. Louis Cardinals</option>
-                            <option value="TBR">Tampa Bay Rays</option>
-                            <option value="TEX">Texas Rangers</option>
-                            <option value="TOR">Toronto Blue Jays</option>
-                            <option value="WSN">Washington Nationals</option>
-                        </select>
-                    </th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                <tr class="head"><th style="width: 8%;">Name</th><th>Age</th><th style="width: 10%;">Team</th><th title="Games Played">GP</th><th title="Plate Appearances">PA</th><th title="At-Bats">AB</th><th title="On-Base Percentage">OBP</th><th title="Slugging Percentage">SLG</th><th title="On-Base Percentage Plus Slugging Percentage">OPS</th><th title="Runs Created">RC</th><th title="Runs Created per Game">RC/G</th><th  title="Isolated Power">ISO</th><th title="Strikeouts per Walk">SO/W</th><th title="At-Bats per Strikeout">AB/SO</th><th title="At-Bats per Home Run">AB/HR</th><th title="At-Bats per Runs Batted In">AB/RBI</th><th title="Strikeout Percentage">SO%</th><th title="Base on Balls/Walk Percentage">BB%</th><th title="Balls in Play Pecentage">BIP%</th><th title="Extra Base Hit Percentage">XBH%</th><th title="Line Drive Percentage">LD%</th><th title="Home Run Percentage">HR%</th><th title="Run Scoring Percentage">RS%</th><th title="Stolen Base Percentage">SB%<br></th></tr>
+                <tr class="head"><th style="width: 11%;">Name</th><th>Age</th><th style="width: 5%;">Team</th><th title="Games Played">GP</th><th title="Plate Appearances">PA</th><th title="At-Bats">AB</th><th title="On-Base Percentage">OBP</th><th title="Slugging Percentage">SLG</th><th title="On-Base Percentage Plus Slugging Percentage">OPS</th><th title="Runs Created">RC</th><th title="Runs Created per Game">RC/G</th><th  title="Isolated Power">ISO</th><th title="Strikeouts per Walk">SO/W</th><th title="At-Bats per Strikeout">AB/SO</th><th title="At-Bats per Home Run">AB/HR</th><th title="At-Bats per Runs Batted In">AB/RBI</th><th title="Strikeout Percentage">SO%</th><th title="Base on Balls/Walk Percentage">BB%</th><th title="Balls in Play Pecentage">BIP%</th><th title="Extra Base Hit Percentage">XBH%</th><th title="Line Drive Percentage">LD%</th><th title="Home Run Percentage">HR%</th><th title="Run Scoring Percentage">RS%</th><th title="Stolen Base Percentage">SB%<br></th></tr>
             </thead>
             <tbody>
                 <tr><td>Jose Abreu</td><td>31</td><td>CHW</td><td>128</td><td>553</td><td>499</td><td>0.325</td><td>0.473</td><td>0.798</td><td>75</td><td>5.2</td><td>0.208</td><td>2.95</td><td>4.6</td><td>22.7</td><td>6.4</td><td>19.70%</td><td>6.70%</td><td>68%</td><td>10.70%</td><td>28%</td><td>4.00%</td><td>29%</td><td>100%<br></td></tr>
@@ -1095,33 +1104,7 @@
             </tbody>
         </table>
         
-        <script>
-            function search() {
-                var name = document.getElementById("name");
-                var team = document.getElementById("team");
-
-                var filter_name = name.value.toUpperCase();
-                var filter_team = team.value;
-
-                var table = document.getElementById("myTable");
-                var rows = table.getElementsByTagName("tr");
-               
-                for (var i=2; i<rows.length; i++) {
-                    row=rows[i];
-                    name=row.cells[0].textContent.trim();
-                    team=row.cells[2].textContent.trim();
-
-
-                    if ((name.toUpperCase().indexOf(filter_name) > -1 && filter_team==="all")
-                        || (name.toUpperCase().indexOf(filter_name) > -1 && team===filter_team)){
-                        row.style.display="";
-                    }
-                    else {
-                        row.style.display = "none";
-                    }
-                }
-            }
-       </script>
+        <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
 
        <div class="credit">
            *The team information was provided by <a href="https://www.baseball-reference.com/bullpen/Baseball_statistics" target="_blank">Baseball Reference</a>

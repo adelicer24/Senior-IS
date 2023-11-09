@@ -221,7 +221,3 @@ def pitchingsab2018():
 @app.route("/statistics-teams")
 def teams():
     return render_template("stat-templates/teams.html")
-
-@app.route("/statistics-battingstd2018alt")
-def battingstd2018alt():
-    return render_template("stat-templates/2018/batting-std2018alt.html")
