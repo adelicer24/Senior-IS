@@ -24,10 +24,7 @@ h1 {
 }
 
 .team {
-    width: 55%;
-    font-size: 11px;
-    padding: 12px 20px 12px 10px;
-    border: 1px solid #ddd;
+    width: 100%;
 }
 
 table {

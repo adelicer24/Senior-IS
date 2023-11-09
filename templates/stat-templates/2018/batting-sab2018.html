@@ -39,8 +39,64 @@
     <div class="main">
         <table id="myTable">
             <thead>
-                <tr><th><input type="text" id="name" class="name" onkeyup="search()" placeholder="Name.."></th><th></th><th><input type="text" id="team" class="team" onkeyup="search()" placeholder="Team.."></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
-                <tr class="head"><th style="width: 8%;">Name</th><th>Age</th><th style="width: 4%;">Team</th><th title="Games Played">GP</th><th title="Plate Appearances">PA</th><th title="At-Bats">AB</th><th title="Batting Average on Balls in Play">BAbip</th><th title="On-Base Percentage Plus Slugging Percentage Plus">OPS+</th><th title="Wins Above Replacement">WAR</th><th title="Offensive Wins Above Replacement">oWAR</th><th title="Defensive Wins Above Replacement">dWAR</th><th title="Runs Above Avergae">RAA</th><th title="Runs Above Replacement">RAR</th><th title="Offensive Runs Above Replacement">oRAR</th><th title="Player Total Offensive Contributions">rOBA</th><th title="Plays Included in Win Probability Added">P</th><th title="Win Probability Added by Offensive Player">WPAo</th><th title="Win Probability Added">WPA+</th><th title="Win Probability Subtracted">WPA-</th><th title="Average Leverage Index">aLI</th><th title="Situational Wins">WPA/LI<br></th></tr>
+                <tr>
+                    <th><input type="text" id="name" class="name" onkeyup="search()" placeholder="Name.."></th>
+                    <th></th>
+                    <th>
+                        <select id="team" class="team" onchange="search()">
+                            <option value="all">All</option>
+                            <option value="ARI">Arizona Diamondbacks</option>
+                            <option value="ATL">Atlanta Braves</option>
+                            <option value="BAL">Baltimore Orioles</option>
+                            <option value="BOS">Boston Red Sox</option>
+                            <option value="CHC">Chicago Cubs</option>
+                            <option value="CHW">Chicago White Sox</option>
+                            <option value="CIN">Cincinnati Reds</option>
+                            <option value="CLE">Cleveland Guardians</option>
+                            <option value="COL">Colorado Rockies</option>
+                            <option value="DET">Detroit Tigers</option>
+                            <option value="HOU">Houston Astros</option>
+                            <option value="KCR">Kansas City Royals</option>
+                            <option value="LAA">Los Angeles Angels</option>
+                            <option value="LAD">Los Angeles Dodgers</option>
+                            <option value="MIA">Miami Marlins</option>
+                            <option value="MIL">Milwaukee Brewers</option>
+                            <option value="MIN">Minnesota Twins</option>
+                            <option value="NYM">New York Mets</option>
+                            <option value="NYY">New York Yankees</option>
+                            <option value="OAK">Oakland Athletics</option>
+                            <option value="PHI">Philadelphia Phillies</option>
+                            <option value="PIT">Pittsburgh Pirates</option>
+                            <option value="SDP">San Diego Padres</option>
+                            <option value="SFG">San Francisco Giants</option>
+                            <option value="SEA">Seattle Mariners</option>
+                            <option value="STL">St. Louis Cardinals</option>
+                            <option value="TBR">Tampa Bay Rays</option>
+                            <option value="TEX">Texas Rangers</option>
+                            <option value="TOR">Toronto Blue Jays</option>
+                            <option value="WSN">Washington Nationals</option>
+                        </select>
+                    </th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr class="head"><th style="width: 8%;">Name</th><th>Age</th><th style="width: 10%;">Team</th><th title="Games Played">GP</th><th title="Plate Appearances">PA</th><th title="At-Bats">AB</th><th title="Batting Average on Balls in Play">BAbip</th><th title="On-Base Percentage Plus Slugging Percentage Plus">OPS+</th><th title="Wins Above Replacement">WAR</th><th title="Offensive Wins Above Replacement">oWAR</th><th title="Defensive Wins Above Replacement">dWAR</th><th title="Runs Above Avergae">RAA</th><th title="Runs Above Replacement">RAR</th><th title="Offensive Runs Above Replacement">oRAR</th><th title="Player Total Offensive Contributions">rOBA</th><th title="Plays Included in Win Probability Added">P</th><th title="Win Probability Added by Offensive Player">WPAo</th><th title="Win Probability Added">WPA+</th><th title="Win Probability Subtracted">WPA-</th><th title="Average Leverage Index">aLI</th><th title="Situational Wins">WPA/LI<br></th></tr>
             </thead>
             <tbody>
                 <tr><td>Jose Abreu</td><td>31</td><td>CHW</td><td>128</td><td>553</td><td>499</td><td>0.294</td><td>117</td><td>2</td><td>2</td><td>-0.7</td><td>-1</td><td>19</td><td>20</td><td>0.34</td><td>563</td><td>0.8</td><td>9.9</td><td>-9.2</td><td>0.94</td><td>0.7<br></td></tr>
@@ -1038,34 +1094,30 @@
         
         <script>
             function search() {
-               var input_name, input_team, filter, table, tr, td, i, txtValue_name, txtValue_team;
-               input_name = document.getElementById("name");
-               input_team = document.getElementById("team");
+                var name = document.getElementById("name");
+                var team = document.getElementById("team");
 
-               filter_name = input_name.value.toUpperCase();
-               filter_team = input_team.value.toUpperCase();
+                var filter_name = name.value.toUpperCase();
+                var filter_team = team.value;
 
-               table = document.getElementById("myTable");
-               tr = table.getElementsByTagName("tr");
+                var table = document.getElementById("myTable");
+                var rows = table.getElementsByTagName("tr");
                
-               for (i = 2; i < tr.length; i++) {
-                   td_name = tr[i].getElementsByTagName("td")[0];
-                   td_team = tr[i].getElementsByTagName("td")[2];
+                for (var i=2; i<rows.length; i++) {
+                    row=rows[i];
+                    name=row.cells[0].textContent.trim();
+                    team=row.cells[2].textContent.trim();
 
-                   if (td_name && td_team){
-                       txtValue_name = td_name.textContent || td_name.innerText;
-                       txtValue_team = td_team.textContent || td_team.innerText;
 
-                       if (txtValue_name.toUpperCase().indexOf(filter_name) > -1
-                           && txtValue_team.toUpperCase().indexOf(filter_team) > -1) {
-                           tr[i].style.display="";
-                       }
-                       else {
-                           tr[i].style.display = "none";
-                       }
-                   }
-               }
-           }
+                    if ((name.toUpperCase().indexOf(filter_name) > -1 && filter_team==="all")
+                        || (name.toUpperCase().indexOf(filter_name) > -1 && team===filter_team)){
+                        row.style.display="";
+                    }
+                    else {
+                        row.style.display = "none";
+                    }
+                }
+            }
        </script>
 
        <div class="credit">
