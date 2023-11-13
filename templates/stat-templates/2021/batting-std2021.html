@@ -88,8 +88,11 @@
 
                 var table = document.getElementById("myTable");
                 var rows = table.getElementsByTagName("tr");
+
+                var rowshidden = 0;
+                var rowcount = rows.length - 2;
                
-                for (var i=1; i<rows.length; i++) {
+                for (var i=2; i<rows.length; i++) {
                     row=rows[i];
                     name=row.cells[0].textContent.trim();
                     team=row.cells[2].textContent.trim();
@@ -101,7 +104,16 @@
                     }
                     else {
                         row.style.display = "none";
+                        rowshidden +=1;
                     }
+                }
+
+                if (rowshidden === rowcount) {
+                    document.getElementById('noresults').style.display = "";
+                }
+
+                else {
+                    document.getElementById('noresults').style.display = "none";
                 }
             }
        </script>
@@ -111,6 +123,7 @@
                 <tr class="head"><th style="width: 11%;">Name</th><th>Age</th><th style="width: 5%;">Team</th><th title="Games Played">GP</th><th  title="Plate Appearances">PA</th><th title="At-Bats">AB</th><th title="Runs">R</th><th title="Hits">H</th><th title="Doubles">2B</th><th title="Triples">3B</th><th title="Home Runs">HR</th><th title="Runs Batted In">RBI</th><th title="Base on Balls/Walks">BB</th><th title="Strikeouts">SO</th><th title="Stolen Bases">SB</th><th title="Caught Stealing">CS</th><th title="Total Bases">TB</th><th title="Outs">O</th><th title="Batting Average">BA</th><th style="width: 8%;" title="Position">Pos<br></th></tr>
             </thead>
             <tbody>
+                <tr><td colspan="20" id="noresults" style="display: none; text-align: left;">No Results</td></tr>
                 <tr><td>Cory Abbott</td><td>25</td><td>CHC</td><td>8</td><td>3</td><td>3</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>2</td><td>0.333</td><td>/1H<br></td></tr>
                 <tr><td>Jose Abreu</td><td>34</td><td>CHW</td><td>152</td><td>659</td><td>566</td><td>86</td><td>148</td><td>30</td><td>2</td><td>30</td><td>117</td><td>61</td><td>143</td><td>1</td><td>0</td><td>272</td><td>456</td><td>0.261</td><td>3D/5<br></td></tr>
                 <tr><td>Ronald Acuna Jr.</td><td>23</td><td>ATL</td><td>82</td><td>360</td><td>297</td><td>72</td><td>84</td><td>19</td><td>1</td><td>24</td><td>52</td><td>49</td><td>85</td><td>17</td><td>6</td><td>177</td><td>224</td><td>0.283</td><td>9/8H<br></td></tr>

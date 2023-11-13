@@ -88,8 +88,11 @@
 
                 var table = document.getElementById("myTable");
                 var rows = table.getElementsByTagName("tr");
+
+                var rowshidden = 0;
+                var rowcount = rows.length - 2;
                
-                for (var i=1; i<rows.length; i++) {
+                for (var i=2; i<rows.length; i++) {
                     row=rows[i];
                     name=row.cells[0].textContent.trim();
                     team=row.cells[2].textContent.trim();
@@ -101,7 +104,16 @@
                     }
                     else {
                         row.style.display = "none";
+                        rowshidden +=1;
                     }
+                }
+
+                if (rowshidden === rowcount) {
+                    document.getElementById('noresults').style.display = "";
+                }
+
+                else {
+                    document.getElementById('noresults').style.display = "none";
                 }
             }
        </script>
@@ -111,6 +123,7 @@
                 <tr class="head"><th style="width: 11%;">Name</th><th>Age</th><th style="width: 5%;">Team</th><th title="Games Played">GP</th><th  title="Plate Appearances">PA</th><th title="At-Bats">AB</th><th title="Runs">R</th><th title="Hits">H</th><th title="Doubles">2B</th><th title="Triples">3B</th><th title="Home Runs">HR</th><th title="Runs Batted In">RBI</th><th title="Base on Balls/Walks">BB</th><th title="Strikeouts">SO</th><th title="Stolen Bases">SB</th><th title="Caught Stealing">CS</th><th title="Total Bases">TB</th><th title="Outs">O</th><th title="Batting Average">BA</th><th style="width: 8%;" title="Position">Pos<br></th></tr>
             </thead>
             <tbody>
+                <tr><td colspan="20" id="noresults" style="display: none; text-align: left;">No Results</td></tr>
                 <tr><td>CJ Abrams</td><td>22</td><td>WSN</td><td>151</td><td>614</td><td>563</td><td>83</td><td>138</td><td>28</td><td>6</td><td>18</td><td>64</td><td>32</td><td>118</td><td>47</td><td>4</td><td>232</td><td>442</td><td>0.245</td><td>6/H<br></td></tr>
                 <tr><td>Jose Abreu</td><td>36</td><td>HOU</td><td>141</td><td>594</td><td>540</td><td>62</td><td>128</td><td>23</td><td>1</td><td>18</td><td>90</td><td>42</td><td>130</td><td>0</td><td>1</td><td>207</td><td>435</td><td>0.237</td><td>3/D<br></td></tr>
                 <tr><td>Wilyer Abreu</td><td>24</td><td>BOS</td><td>28</td><td>85</td><td>76</td><td>10</td><td>24</td><td>6</td><td>0</td><td>2</td><td>14</td><td>9</td><td>23</td><td>3</td><td>1</td><td>36</td><td>53</td><td>0.316</td><td>87/H9D<br></td></tr>

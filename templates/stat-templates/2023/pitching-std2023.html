@@ -88,8 +88,11 @@
 
                 var table = document.getElementById("myTable");
                 var rows = table.getElementsByTagName("tr");
+
+                var rowshidden = 0;
+                var rowcount = rows.length - 2;
                
-                for (var i=1; i<rows.length; i++) {
+                for (var i=2; i<rows.length; i++) {
                     row=rows[i];
                     name=row.cells[0].textContent.trim();
                     team=row.cells[2].textContent.trim();
@@ -101,7 +104,16 @@
                     }
                     else {
                         row.style.display = "none";
+                        rowshidden +=1;
                     }
+                }
+
+                if (rowshidden === rowcount) {
+                    document.getElementById('noresults').style.display = "";
+                }
+
+                else {
+                    document.getElementById('noresults').style.display = "none";
                 }
             }
        </script>
@@ -111,6 +123,7 @@
                 <tr class="head"><th style="width: 11%;">Name</th><th>Age</th><th style="width: 5%;">Team</th><th title="Wins">W</th><th title="Losses">L</th><th title="Win Percentage">W%</th><th title="Earned Runs Allowed">ERA</th><th title="Games Played">GP</th><th title="Games Started">GS</th><th title="Games Finished">GF</th><th title="Complete Games">CG</th><th title="Shutouts">SHO</th><th title="Saves">SV</th><th title="Innings Played">IP</th><th title="Batters Faced">BF</th><th title="Hits Allowed">HA</th><th title="Runs Allowed">RA</th><th title="Home Runs Allowed">HRA</th><th title="Earned Runs">ER</th><th title="Strikeouts">SO</th><th title="Base on Balls\Walks">BB</th><th title="Wild Pitches">WP<br></th></tr>
             </thead>
             <tbody>
+                <tr><td colspan="22" id="noresults" style="display: none; text-align: left;">No Results</td></tr>
                 <tr><td>Fernando Abad</td><td>37</td><td>COL</td><td>1</td><td>0</td><td>1</td><td>4.26</td><td>6</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>6.1</td><td>32</td><td>11</td><td>3</td><td>2</td><td>3</td><td>2</td><td>3</td><td>0<br></td></tr>
                 <tr><td>Andrew Abbott</td><td>24</td><td>CIN</td><td>8</td><td>6</td><td>0.571</td><td>3.87</td><td>21</td><td>21</td><td>0</td><td>0</td><td>0</td><td>0</td><td>109.1</td><td>459</td><td>100</td><td>47</td><td>16</td><td>47</td><td>120</td><td>44</td><td>1<br></td></tr>
                 <tr><td>Cory Abbott</td><td>27</td><td>WSN</td><td>1</td><td>2</td><td>0.333</td><td>6.64</td><td>22</td><td>0</td><td>10</td><td>0</td><td>0</td><td>0</td><td>39.1</td><td>183</td><td>48</td><td>29</td><td>9</td><td>29</td><td>40</td><td>19</td><td>4<br></td></tr>

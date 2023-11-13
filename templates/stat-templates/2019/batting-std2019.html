@@ -88,8 +88,11 @@
 
                 var table = document.getElementById("myTable");
                 var rows = table.getElementsByTagName("tr");
+
+                var rowshidden = 0;
+                var rowcount = rows.length - 2;
                
-                for (var i=1; i<rows.length; i++) {
+                for (var i=2; i<rows.length; i++) {
                     row=rows[i];
                     name=row.cells[0].textContent.trim();
                     team=row.cells[2].textContent.trim();
@@ -101,7 +104,16 @@
                     }
                     else {
                         row.style.display = "none";
+                        rowshidden +=1;
                     }
+                }
+
+                if (rowshidden === rowcount) {
+                    document.getElementById('noresults').style.display = "";
+                }
+
+                else {
+                    document.getElementById('noresults').style.display = "none";
                 }
             }
        </script>
@@ -111,6 +123,7 @@
                 <tr class="head"><th style="width: 11%;">Name</th><th>Age</th><th style="width: 5%;">Team</th><th title="Games Played">GP</th><th  title="Plate Appearances">PA</th><th title="At-Bats">AB</th><th title="Runs">R</th><th title="Hits">H</th><th title="Doubles">2B</th><th title="Triples">3B</th><th title="Home Runs">HR</th><th title="Runs Batted In">RBI</th><th title="Base on Balls/Walks">BB</th><th title="Strikeouts">SO</th><th title="Stolen Bases">SB</th><th title="Caught Stealing">CS</th><th title="Total Bases">TB</th><th title="Outs">O</th><th title="Batting Average">BA</th><th style="width: 8%;" title="Position">Pos<br></th></tr>
             </thead>
             <tbody>
+                <tr><td colspan="20" id="noresults" style="display: none; text-align: left;">No Results</td></tr>
                 <tr><td>Jose Abreu</td><td>32</td><td>CHW</td><td>159</td><td>693</td><td>634</td><td>85</td><td>180</td><td>38</td><td>1</td><td>33</td><td>123</td><td>36</td><td>152</td><td>2</td><td>2</td><td>319</td><td>490</td><td>0.284</td><td>3D<br></td></tr>
                 <tr><td>Ronald Acuna Jr.</td><td>21</td><td>ATL</td><td>156</td><td>715</td><td>626</td><td>127</td><td>175</td><td>22</td><td>2</td><td>41</td><td>101</td><td>76</td><td>188</td><td>37</td><td>9</td><td>324</td><td>469</td><td>0.28</td><td>879/H<br></td></tr>
                 <tr><td>Cristhian Adames</td><td>27</td><td>SFG</td><td>10</td><td>24</td><td>22</td><td>1</td><td>7</td><td>1</td><td>0</td><td>0</td><td>2</td><td>2</td><td>8</td><td>0</td><td>0</td><td>8</td><td>15</td><td>0.318</td><td>/H45<br></td></tr>

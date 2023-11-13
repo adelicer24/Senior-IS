@@ -104,8 +104,11 @@
     
                 var table = document.getElementById("myTable");
                 var rows = table.getElementsByTagName("tr");
+
+                var rowshidden = 0;
+                var rowcount = rows.length - 2;
                 
-                for (var i=1; i<rows.length; i++) {
+                for (var i=2; i<rows.length; i++) {
                     row=rows[i];
                     year=row.cells[0].textContent.trim();
                     team=row.cells[1].textContent.trim();
@@ -132,7 +135,16 @@
                     }
                     else {
                         row.style.display = "none";
+                        rowshidden +=1;
                     }
+                }
+
+                if (rowshidden === rowcount) {
+                    document.getElementById('noresults').style.display = "";
+                }
+
+                else {
+                    document.getElementById('noresults').style.display = "none";
                 }
             }
        </script>
@@ -142,6 +154,7 @@
                 <tr class="head"><th style="width: 4%;">Year</th><th style="width: 7%;">Team Name</th><th style="width: 3%;">Team Abbreviation</th><th style="width: 3%;">Wins</th><th style="width: 2%;">Losses</th><th style="width: 3%;">Winning Percentage</th><th style="width: 5%;">Division</th><th style="width: 6%;">League</th><th style="width: 3%;">Division Outcome</th><th style="width: 10%;">Season Outcome</th><th style="width: 5%;">Payroll<br></th></tr>
             </thead>
             <tbody>
+                <tr><td colspan="11" id="noresults" style="display: none;">No Results</td></tr>
                 <tr><td>2018</td><td>Arizona Diamondbacks</td><td>ARI</td><td>82</td><td>80</td><td>0.506</td><td>West Division</td><td>National League</td><td>3rd Place</td><td>Eliminated from Postseason Contention</td><td>$132,500,000<br></td></tr>
                 <tr><td>2018</td><td>Atlanta Braves</td><td>ATL</td><td>90</td><td>72</td><td>0.556</td><td>East Division</td><td>National League</td><td>1st Place</td><td>Postseason Contender</td><td>$120,540,000<br></td></tr>
                 <tr><td>2018</td><td>Baltimore Orioles</td><td>BAL</td><td>47</td><td>115</td><td>0.29</td><td>East Division</td><td>American League</td><td>5th Place</td><td>Eliminated from Postseason Contention</td><td>$143,090,000<br></td></tr>

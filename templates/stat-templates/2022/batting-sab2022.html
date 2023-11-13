@@ -88,8 +88,11 @@
 
                 var table = document.getElementById("myTable");
                 var rows = table.getElementsByTagName("tr");
+
+                var rowshidden = 0;
+                var rowcount = rows.length - 2;
                
-                for (var i=1; i<rows.length; i++) {
+                for (var i=2; i<rows.length; i++) {
                     row=rows[i];
                     name=row.cells[0].textContent.trim();
                     team=row.cells[2].textContent.trim();
@@ -101,7 +104,16 @@
                     }
                     else {
                         row.style.display = "none";
+                        rowshidden +=1;
                     }
+                }
+
+                if (rowshidden === rowcount) {
+                    document.getElementById('noresults').style.display = "";
+                }
+
+                else {
+                    document.getElementById('noresults').style.display = "none";
                 }
             }
        </script>
@@ -111,6 +123,7 @@
                 <tr class="head"><th style="width: 11%;">Name</th><th>Age</th><th style="width: 5%;">Team</th><th title="Games Played">GP</th><th title="Plate Appearances">PA</th><th title="At-Bats">AB</th><th title="Batting Average on Balls in Play">BAbip</th><th title="On-Base Percentage Plus Slugging Percentage Plus">OPS+</th><th title="Wins Above Replacement">WAR</th><th title="Offensive Wins Above Replacement">oWAR</th><th title="Defensive Wins Above Replacement">dWAR</th><th title="Runs Above Avergae">RAA</th><th title="Runs Above Replacement">RAR</th><th title="Offensive Runs Above Replacement">oRAR</th><th title="Player Total Offensive Contributions">rOBA</th><th title="Plays Included in Win Probability Added">P</th><th title="Win Probability Added by Offensive Player">WPAo</th><th title="Win Probability Added">WPA+</th><th title="Win Probability Subtracted">WPA-</th><th title="Average Leverage Index">aLI</th><th title="Situational Wins">WPA/LI<br></th></tr>
             </thead>
             <tbody>
+                <tr><td colspan="21" id="noresults" style="display: none; text-align: left;">No Results</td></tr>
                 <tr><td>CJ Abrams</td><td>21</td><td>TOT</td><td>90</td><td>302</td><td>284</td><td>0.291</td><td>75</td><td>0.1</td><td>0.6</td><td>-0.1</td><td>-8</td><td>2</td><td>7</td><td>0.272</td><td>320</td><td>-1</td><td>4.7</td><td>-5.8</td><td>1</td><td>-1.3<br></td></tr>
                 <tr><td>Jose Abreu</td><td>35</td><td>CHW</td><td>157</td><td>679</td><td>601</td><td>0.35</td><td>134</td><td>4.2</td><td>4.1</td><td>-0.9</td><td>19</td><td>42</td><td>41</td><td>0.368</td><td>688</td><td>1.6</td><td>12.9</td><td>-11.3</td><td>1</td><td>1.6<br></td></tr>
                 <tr><td>Ronald Acuna Jr.</td><td>24</td><td>ATL</td><td>119</td><td>533</td><td>467</td><td>0.331</td><td>112</td><td>2.7</td><td>2.6</td><td>-0.5</td><td>9</td><td>27</td><td>27</td><td>0.346</td><td>582</td><td>1.3</td><td>9.2</td><td>-7.9</td><td>0.9</td><td>1.1<br></td></tr>

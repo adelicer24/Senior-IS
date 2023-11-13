@@ -88,8 +88,11 @@
 
                 var table = document.getElementById("myTable");
                 var rows = table.getElementsByTagName("tr");
+
+                var rowshidden = 0;
+                var rowcount = rows.length - 2;
                
-                for (var i=1; i<rows.length; i++) {
+                for (var i=2; i<rows.length; i++) {
                     row=rows[i];
                     name=row.cells[0].textContent.trim();
                     team=row.cells[2].textContent.trim();
@@ -101,7 +104,16 @@
                     }
                     else {
                         row.style.display = "none";
+                        rowshidden +=1;
                     }
+                }
+
+                if (rowshidden === rowcount) {
+                    document.getElementById('noresults').style.display = "";
+                }
+
+                else {
+                    document.getElementById('noresults').style.display = "none";
                 }
             }
        </script>
@@ -111,6 +123,7 @@
                 <tr class="head"><th style="width: 11%;">Name</th><th>Age</th><th style="width: 5%;">Team</th><th title="Games Played">GP</th><th title="Plate Appearances">PA</th><th title="At-Bats">AB</th><th title="On-Base Percentage">OBP</th><th title="Slugging Percentage">SLG</th><th title="On-Base Percentage Plus Slugging Percentage">OPS</th><th title="Runs Created">RC</th><th title="Runs Created per Game">RC/G</th><th  title="Isolated Power">ISO</th><th title="Strikeouts per Walk">SO/W</th><th title="At-Bats per Strikeout">AB/SO</th><th title="At-Bats per Home Run">AB/HR</th><th title="At-Bats per Runs Batted In">AB/RBI</th><th title="Strikeout Percentage">SO%</th><th title="Base on Balls/Walk Percentage">BB%</th><th title="Balls in Play Pecentage">BIP%</th><th title="Extra Base Hit Percentage">XBH%</th><th title="Line Drive Percentage">LD%</th><th title="Home Run Percentage">HR%</th><th title="Run Scoring Percentage">RS%</th><th title="Stolen Base Percentage">SB%<br></th></tr>
             </thead>
             <tbody>
+                <tr><td colspan="24" id="noresults" style="display: none; text-align: left;">No Results</td></tr>
                 <tr><td>Jose Abreu</td><td>33</td><td>CHW</td><td>60</td><td>262</td><td>240</td><td>0.37</td><td>0.617</td><td>0.987</td><td>51</td><td>7.6</td><td>0.3</td><td>3.28</td><td>4.1</td><td>12.6</td><td>4</td><td>22.50%</td><td>6.90%</td><td>62%</td><td>13.00%</td><td>32%</td><td>7.30%</td><td>31%</td><td>0<br></td></tr>
                 <tr><td>Ronald Acuna Jr.</td><td>22</td><td>ATL</td><td>46</td><td>202</td><td>160</td><td>0.406</td><td>0.581</td><td>0.987</td><td>42</td><td>8.7</td><td>0.331</td><td>1.58</td><td>2.7</td><td>11.4</td><td>5.5</td><td>29.70%</td><td>18.80%</td><td>43%</td><td>12.40%</td><td>29%</td><td>6.90%</td><td>47%</td><td>89%<br></td></tr>
                 <tr><td>Willy Adames</td><td>24</td><td>TBR</td><td>54</td><td>205</td><td>185</td><td>0.332</td><td>0.481</td><td>0.813</td><td>29</td><td>5.3</td><td>0.222</td><td>3.7</td><td>2.5</td><td>23.1</td><td>8</td><td>36.10%</td><td>9.80%</td><td>50%</td><td>11.70%</td><td>29%</td><td>3.90%</td><td>34%</td><td>67%<br></td></tr>

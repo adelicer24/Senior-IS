@@ -88,8 +88,11 @@
 
                 var table = document.getElementById("myTable");
                 var rows = table.getElementsByTagName("tr");
+
+                var rowshidden = 0;
+                var rowcount = rows.length - 2;
                
-                for (var i=1; i<rows.length; i++) {
+                for (var i=2; i<rows.length; i++) {
                     row=rows[i];
                     name=row.cells[0].textContent.trim();
                     team=row.cells[2].textContent.trim();
@@ -101,7 +104,16 @@
                     }
                     else {
                         row.style.display = "none";
+                        rowshidden +=1;
                     }
+                }
+
+                if (rowshidden === rowcount) {
+                    document.getElementById('noresults').style.display = "";
+                }
+
+                else {
+                    document.getElementById('noresults').style.display = "none";
                 }
             }
        </script>
@@ -111,6 +123,7 @@
                 <tr class="head"><th style="width: 11%;">Name</th><th>Age</th><th style="width: 5%;">Team</th><th title="Games Played">GP</th><th title="Games Started">GS</th><th title="Innings Played">IP</th><th title="Fielding Independent Pitching">FIP</th><th title="Wins Above Replacement">WAR</th><th title="Runs Above Replacement">RAR</th><th title="Batting Average on Balls In Play Allowed">BAbipA</th><th title="Plays Included in Win Probability Added">P</th><th title="Win Probability Added by Pitcher">WPAp</th><th title="Win Probability Added">WPA+</th><th title="Win Probability Subtracted">WPA-</th><th title="Average Leverage Index">aLI</th><th title="Situational Wins">WPA/LI<br></th></tr>
             </thead>
             <tbody>
+                <tr><td colspan="16" id="noresults" style="display: none; text-align: left;">No Results</td></tr>
                 <tr><td>Cory Abbott</td><td>26</td><td>WSN</td><td>16</td><td>9</td><td>48</td><td>6.36</td><td>0</td><td>0</td><td>0.248</td><td>225</td><td>-0.7</td><td>2.8</td><td>-3.5</td><td>0.81</td><td>-1.2<br></td></tr>
                 <tr><td>Albert Abreu</td><td>26</td><td>TOT</td><td>33</td><td>0</td><td>38.2</td><td>4.77</td><td>-0.1</td><td>0.3</td><td>0.291</td><td>184</td><td>-0.5</td><td>1.6</td><td>-2.1</td><td>0.58</td><td>-0.4<br></td></tr>
                 <tr><td>Bryan Abreu</td><td>25</td><td>HOU</td><td>55</td><td>0</td><td>60.1</td><td>2.12</td><td>-0.2</td><td>1.3</td><td>0.336</td><td>262</td><td>0.8</td><td>3.7</td><td>-2.9</td><td>0.8</td><td>0.5<br></td></tr>

@@ -88,8 +88,11 @@
 
                 var table = document.getElementById("myTable");
                 var rows = table.getElementsByTagName("tr");
+
+                var rowshidden = 0;
+                var rowcount = rows.length - 2;
                
-                for (var i=1; i<rows.length; i++) {
+                for (var i=2; i<rows.length; i++) {
                     row=rows[i];
                     name=row.cells[0].textContent.trim();
                     team=row.cells[2].textContent.trim();
@@ -101,7 +104,16 @@
                     }
                     else {
                         row.style.display = "none";
+                        rowshidden +=1;
                     }
+                }
+
+                if (rowshidden === rowcount) {
+                    document.getElementById('noresults').style.display = "";
+                }
+
+                else {
+                    document.getElementById('noresults').style.display = "none";
                 }
             }
        </script>
@@ -111,6 +123,7 @@
                 <tr class="head"><th style="width: 11%;">Name</th><th>Age</th><th style="width: 5%;">Team</th><th title="Games Played">GP</th><th title="Games Started">GS</th><th title="Innings Played">IP</th><th title="Walks and Hits per Inning Pitched">WHIP</th><th title="Earned Runs Average Plus">ERA+</th><th title="Batted Average Allowed">BAA</th><th title="On-Base Percentage Allowed">OBPA</th><th title="Slugging Percentage Allowed">SLGA</th><th title="On-Base Percentage Plus Slugging Percentage Allowed">OPSA</th><th title="Hit Allowed per 9 Innings">H/9</th><th title="Home Runs Allowed per 9 Innings">HR/9</th><th title="Base on Balls/Walks per 9 Innings">BB/9</th><th title="Strikeouts per 9 Innings">SO/9</th><th title="Strikeouts per Walk">SO/W</th><th title="Home Run Percentage">HR%</th><th title="Strikeout Percentage">SO%</th><th title="Base on Balls/Walk Percentage">BB%</th><th title="Extra Base Hit Percentage">XBH%<br></th></tr>
             </thead>
             <tbody>
+                <tr><td colspan="21" id="noresults" style="display: none; text-align: left;">No Results</td></tr>
                 <tr><td>Albert Abreu</td><td>24</td><td>NYY</td><td>2</td><td>0</td><td>1.1</td><td>4.5</td><td>27</td><td>0.5</td><td>0.636</td><td>0.875</td><td>1.511</td><td>27</td><td>6.8</td><td>13.5</td><td>13.5</td><td>1</td><td>9.10%</td><td>18.20%</td><td>18.20%</td><td>9.10%<br></td></tr>
                 <tr><td>Bryan Abreu</td><td>23</td><td>HOU</td><td>4</td><td>0</td><td>3.1</td><td>2.4</td><td>181</td><td>0.091</td><td>0.5</td><td>0.182</td><td>0.682</td><td>2.7</td><td>0</td><td>18.9</td><td>8.1</td><td>0.43</td><td>0.00%</td><td>15.00%</td><td>35.00%</td><td>5.00%<br></td></tr>
                 <tr><td>Jason Adam</td><td>28</td><td>CHC</td><td>13</td><td>0</td><td>13.2</td><td>1.244</td><td>140</td><td>0.18</td><td>0.293</td><td>0.38</td><td>0.673</td><td>5.9</td><td>1.3</td><td>5.3</td><td>13.8</td><td>2.63</td><td>3.50%</td><td>36.20%</td><td>13.80%</td><td>8.60%<br></td></tr>

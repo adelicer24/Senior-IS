@@ -88,8 +88,11 @@
 
                 var table = document.getElementById("myTable");
                 var rows = table.getElementsByTagName("tr");
+
+                var rowshidden = 0;
+                var rowcount = rows.length - 2;
                
-                for (var i=1; i<rows.length; i++) {
+                for (var i=2; i<rows.length; i++) {
                     row=rows[i];
                     name=row.cells[0].textContent.trim();
                     team=row.cells[2].textContent.trim();
@@ -101,7 +104,16 @@
                     }
                     else {
                         row.style.display = "none";
+                        rowshidden +=1;
                     }
+                }
+
+                if (rowshidden === rowcount) {
+                    document.getElementById('noresults').style.display = "";
+                }
+
+                else {
+                    document.getElementById('noresults').style.display = "none";
                 }
             }
        </script>
@@ -111,6 +123,7 @@
                 <tr class="head"><th>Name</th><th>Age</th><th style="width: 5%;">Team</th><th title="Games Played">GP</th><th title="Games Started">GS</th><th title="Complete Games">CG</th><th title="Innings Played">IP</th><th title="Putouts">PO</th><th title="Assists">A</th><th title="Errors">E</th><th title="Position">Pos<br></th></tr>
             </thead>
             <tbody>
+                <tr><td colspan="11" id="noresults" style="display: none; text-align: left;">No Results</td></tr>
                 <tr><td>Albert Abreu</td><td>24</td><td>NYY</td><td>2</td><td>0</td><td>0</td><td>1.1</td><td>0</td><td>0</td><td>0</td><td>P<br></td></tr>
                 <tr><td>Bryan Abreu</td><td>23</td><td>HOU</td><td>4</td><td>0</td><td>0</td><td>3.1</td><td>2</td><td>0</td><td>0</td><td>P<br></td></tr>
                 <tr><td>Jose Abreu</td><td>33</td><td>CHW</td><td>54</td><td>54</td><td>53</td><td>470</td><td>430</td><td>27</td><td>5</td><td>1B<br></td></tr>

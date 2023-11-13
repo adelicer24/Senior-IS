@@ -88,8 +88,11 @@
 
                 var table = document.getElementById("myTable");
                 var rows = table.getElementsByTagName("tr");
+
+                var rowshidden = 0;
+                var rowcount = rows.length - 2;
                
-                for (var i=1; i<rows.length; i++) {
+                for (var i=2; i<rows.length; i++) {
                     row=rows[i];
                     name=row.cells[0].textContent.trim();
                     team=row.cells[2].textContent.trim();
@@ -101,7 +104,16 @@
                     }
                     else {
                         row.style.display = "none";
+                        rowshidden +=1;
                     }
+                }
+
+                if (rowshidden === rowcount) {
+                    document.getElementById('noresults').style.display = "";
+                }
+
+                else {
+                    document.getElementById('noresults').style.display = "none";
                 }
             }
        </script>
@@ -111,6 +123,7 @@
                 <tr class="head"><th>Name</th><th>Age</th><th style="width: 5%;">Team</th><th title="Games Played">GP</th><th title="Defensive Chances">DC</th><th title="Fielding Percentage">Fld%</th><th title="Total Fielding Runs Above Average">FRAA</th><th title="Range Factor per 9 Innings">RF/9</th><th title="Range Factor Per Game">RF/G</th><th title="Position">Pos<br></th></tr>
             </thead>
             <tbody>
+                <tr><td colspan="10" id="noresults" style="display: none; text-align: left;">No Results</td></tr>
                 <tr><td>Fernando Abad</td><td>33</td><td>SFG</td><td>21</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>P<br></td></tr>
                 <tr><td>Bryan Abreu</td><td>22</td><td>HOU</td><td>7</td><td>4</td><td>1</td><td>0</td><td>4.15</td><td>0.57</td><td>P<br></td></tr>
                 <tr><td>Jose Abreu</td><td>32</td><td>CHW</td><td>125</td><td>1094</td><td>0.993</td><td>-1</td><td>8.86</td><td>8.69</td><td>1B<br></td></tr>

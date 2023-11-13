@@ -88,8 +88,11 @@
 
                 var table = document.getElementById("myTable");
                 var rows = table.getElementsByTagName("tr");
+
+                var rowshidden = 0;
+                var rowcount = rows.length - 2;
                
-                for (var i=1; i<rows.length; i++) {
+                for (var i=2; i<rows.length; i++) {
                     row=rows[i];
                     name=row.cells[0].textContent.trim();
                     team=row.cells[2].textContent.trim();
@@ -101,7 +104,16 @@
                     }
                     else {
                         row.style.display = "none";
+                        rowshidden +=1;
                     }
+                }
+
+                if (rowshidden === rowcount) {
+                    document.getElementById('noresults').style.display = "";
+                }
+
+                else {
+                    document.getElementById('noresults').style.display = "none";
                 }
             }
        </script>
@@ -111,6 +123,7 @@
                 <tr class="head"><th style="width: 11%;">Name</th><th>Age</th><th style="width: 5%;">Team</th><th title="Games Played">GP</th><th title="Plate Appearances">PA</th><th title="At-Bats">AB</th><th title="On-Base Percentage">OBP</th><th title="Slugging Percentage">SLG</th><th title="On-Base Percentage Plus Slugging Percentage">OPS</th><th title="Runs Created">RC</th><th title="Runs Created per Game">RC/G</th><th  title="Isolated Power">ISO</th><th title="Strikeouts per Walk">SO/W</th><th title="At-Bats per Strikeout">AB/SO</th><th title="At-Bats per Home Run">AB/HR</th><th title="At-Bats per Runs Batted In">AB/RBI</th><th title="Strikeout Percentage">SO%</th><th title="Base on Balls/Walk Percentage">BB%</th><th title="Balls in Play Pecentage">BIP%</th><th title="Extra Base Hit Percentage">XBH%</th><th title="Line Drive Percentage">LD%</th><th title="Home Run Percentage">HR%</th><th title="Run Scoring Percentage">RS%</th><th title="Stolen Base Percentage">SB%<br></th></tr>
             </thead>
             <tbody>
+                <tr><td colspan="24" id="noresults" style="display: none; text-align: left;">No Results</td></tr>
                 <tr><td>CJ Abrams</td><td>22</td><td>WSN</td><td>151</td><td>614</td><td>563</td><td>0.3</td><td>0.412</td><td>0.712</td><td>76</td><td>4.6</td><td>0.167</td><td>3.69</td><td>4.8</td><td>31.3</td><td>8.8</td><td>19.20%</td><td>5.20%</td><td>70%</td><td>8.50%</td><td>21%</td><td>2.90%</td><td>39%</td><td>92%<br></td></tr>
                 <tr><td>Jose Abreu</td><td>36</td><td>HOU</td><td>141</td><td>594</td><td>540</td><td>0.296</td><td>0.383</td><td>0.68</td><td>60</td><td>3.7</td><td>0.146</td><td>3.1</td><td>4.2</td><td>30</td><td>6</td><td>21.90%</td><td>7.10%</td><td>67%</td><td>7.10%</td><td>26%</td><td>3.00%</td><td>28%</td><td>0%<br></td></tr>
                 <tr><td>Wilyer Abreu</td><td>24</td><td>BOS</td><td>28</td><td>85</td><td>76</td><td>0.388</td><td>0.474</td><td>0.862</td><td>15</td><td>7.5</td><td>0.158</td><td>2.56</td><td>3.3</td><td>38</td><td>5.4</td><td>27.10%</td><td>10.60%</td><td>60%</td><td>9.40%</td><td>25%</td><td>2.40%</td><td>26%</td><td>75%<br></td></tr>
