@@ -24,6 +24,7 @@
                 <tr class="head"><th style="width: 15%;">Statistic Category</th><th style="width: 15%;">Statistic Abbreviation</th><th style="width: 15%;">Statistic Name</th><th style="width: 40%;">Definition</th></tr>
             </thead>
             <tbody>
+                <tr><td colspan="4" id="noresults" style="display: none;">No Results</td></tr>
                 <tr><td>Advanced Pitching</td><td>ERA+</td><td>Adjusted Earned Run Average</td><td>A normalized version of ERA that accounts for external factors like ballparks and opponents</td></tr>
                 <tr><td>Standard Fielding</td><td>A</td><td>Assists</td><td>Awarded to a defensive player who touches the ball prior to a runner being thrown out</td></tr>
                 <tr><td>Batting</td><td>AB</td><td>At-Bats</td><td>A plate appearance that ends with a batter being out (except sacrifice plays) or ends with a player reaching a base by a hit, error, or fielder's choice</td></tr>
@@ -117,36 +118,67 @@
         </table>
 
         <script>
+            /*Function used to filter the table by search values*/
             function search() {
-                var input_category, input_abb, input_name, filter, table, tr, td, i, txtValue_category, txtValue_abb, txtValue_name;
-                input_category = document.getElementById("category");
-                input_abb = document.getElementById("abbreviation");
-                input_name = document.getElementById("name");
+                /*Stores the header columns that contain each of the values below*/
+                var input_category = document.getElementById("category");
+                var input_abb = document.getElementById("abbreviation");
+                var input_name = document.getElementById("name");
 
-                filter_category = input_category.value.toUpperCase();
-                filter_abb = input_abb.value.toUpperCase();
-                filter_name = input_name.value.toUpperCase();
+                /*Stores the values typed into the search boxes*/
+                var filter_category = input_category.value.toUpperCase();
+                var filter_abb = input_abb.value.toUpperCase();
+                var filter_name = input_name.value.toUpperCase();
 
-                table = document.getElementById("myTable");
-                tr = table.getElementsByTagName("tr");
+                /*Stores the html table*/
+                var table = document.getElementById("myTable");
+                /*Stores all of the rows in the table*/
+                var rows = table.getElementsByTagName("tr");
+
+                /*Stores the value of hidden rows in the table*/
+                var rowshidden = 0;
+                /*Stores the value of rows that contain data (minus the header, search row, and hidden "No Results" row)*/
+                var rowcount = rows.length - 3;
                 
-                for (i = 2; i < tr.length; i++) {
-                    td_category = tr[i].getElementsByTagName("td")[0];
-                    td_abb = tr[i].getElementsByTagName("td")[1];
-                    td_name = tr[i].getElementsByTagName("td")[2];
-                    if (td_category && td_abb && td_name) {
+                /*Loops through the table skipping the header, search row, and the hidden "No Results" row*/
+                for (var i=2; i<rows.length; i++) {
+                    /*Stores the value of each given column from the current row*/
+                    td_category = rows[i].getElementsByTagName("td")[0];
+                    td_abb = rows[i].getElementsByTagName("td")[1];
+                    td_name = rows[i].getElementsByTagName("td")[2];
+
+                    /*Finds if any search box contains a value typed into it*/
+                    if (td_category && td_abb && td_name)
+                    {
                         txtValue_category = td_category.textContent || td_category.innerText;
                         txtValue_abb = td_abb.textContent || td_abb.innerText;
                         txtValue_name = td_name.textContent || td_name.innerText;
+                        /*Compares the values in the search boxes to the values in each row*/
                         if (txtValue_category.toUpperCase().indexOf(filter_category) > -1
                             && txtValue_abb.toUpperCase().indexOf(filter_abb) > -1
-                            &&txtValue_name.toUpperCase().indexOf(filter_name) > -1) {
-                                tr[i].style.display="";
+                            &&txtValue_name.toUpperCase().indexOf(filter_name) > -1)
+                        {
+                            /*If the search values match a row, then display that row*/
+                            rows[i].style.display="";
                         }
                         else {
-                            tr[i].style.display = "none";
+                            /*If the search values do not match a row, then do not display that row*/
+                            rows[i].style.display = "none";
+                            /*Increase the number of hiden rows by 1*/
+                            rowshidden +=1;
                         }
                     }
+                }
+
+                /*Compare the number of hidden rows to the number of total rows*/
+                if (rowshidden === rowcount) {
+                    /*If all rows of the table are hidden, display "No Results" row*/
+                    document.getElementById('noresults').style.display = "";
+                }
+
+                else {
+                    /*If any rows of the table are shown, do not display "No Results" row*/
+                    document.getElementById('noresults').style.display = "none";
                 }
             }
         </script>

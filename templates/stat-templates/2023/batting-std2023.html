@@ -79,40 +79,56 @@
         </div>
 
         <script>
+            /*Functtion used to filter the table by the search value and selected dropdown value*/
             function search() {
+                /*Stores the header columns that contain each of the values below*/
                 var name = document.getElementById("name");
                 var team = document.getElementById("team");
 
+                /*Stores the values searched and selected in the dropdown*/
                 var filter_name = name.value.toUpperCase();
                 var filter_team = team.value;
 
+                /*Stores the html table*/
                 var table = document.getElementById("myTable");
+                /*Stores all of the rows in the table*/
                 var rows = table.getElementsByTagName("tr");
 
+                /*Stores the value of the hidden rows in the table*/
                 var rowshidden = 0;
+                /*Stores the value of rows that contain data (minus the header and hidden "No Results" row)*/
                 var rowcount = rows.length - 2;
                
+                /*Loops throw the table skipping the header and the hidden "No Results" row*/
                 for (var i=2; i<rows.length; i++) {
+                    /*Stores each individual row*/
                     row=rows[i];
+                    /*Stores the values of each given column from the current row*/
                     name=row.cells[0].textContent.trim();
                     team=row.cells[2].textContent.trim();
 
-
+                    /*Compares the values in the search box and the selected dropdown value to the values in each row*/
                     if ((name.toUpperCase().indexOf(filter_name) > -1 && filter_team==="all")
-                        || (name.toUpperCase().indexOf(filter_name) > -1 && team===filter_team)){
+                        || (name.toUpperCase().indexOf(filter_name) > -1 && team===filter_team))
+                    {
+                        /*If the value in the search box and the selected dropdown value match a row, then display that row*/
                         row.style.display="";
                     }
                     else {
+                        /*If the value in the search box and the selected dropdown value do not match a row, then do not display that row*/
                         row.style.display = "none";
+                        /*Increase the number of hidden rows by 1*/
                         rowshidden +=1;
                     }
                 }
 
+                /*Compare the number of hidden rows to the number of total rows*/
                 if (rowshidden === rowcount) {
+                    /*If all rows of the table are hidden, display "No Results" row*/
                     document.getElementById('noresults').style.display = "";
                 }
-
                 else {
+                    /*If any rows of the table are shown, do not display "No Results" row*/
                     document.getElementById('noresults').style.display = "none";
                 }
             }
@@ -783,7 +799,9 @@
             </tbody>
         </table>
 
-        <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+        <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js">
+            /*Allows table headers to be clicked on to sort table columns by value*/
+        </script>
 
        <div class="credit">
            *The team information was provided by <a href="https://www.baseball-reference.com/bullpen/Baseball_statistics" target="_blank">Baseball Reference</a>

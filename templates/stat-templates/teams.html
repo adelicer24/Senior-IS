@@ -91,30 +91,41 @@
         </div>
 
         <script>
+            /*Function used to filter the table by selected dropdown values*/
             function search() {
+                /*Stores the header columns that contain each of the values below*/
                 var year = document.getElementById("year");
                 var team = document.getElementById("team");
                 var league = document.getElementById("league");
                 var snout = document.getElementById("snout");
     
+                /*Stores the values selected in the dropdown*/
                 var filter_year = year.value;
                 var filter_team = team.value;
                 var filter_league = league.value;
                 var filter_snout = snout.value;
     
+                /*Stores the html table*/
                 var table = document.getElementById("myTable");
+                /*Stores all of the rows in the table*/
                 var rows = table.getElementsByTagName("tr");
 
+                /*Stores the value of hidden rows in the table*/
                 var rowshidden = 0;
+                /*Stores the value of rows that contain data (minus the header and hidden "No Results" row)*/
                 var rowcount = rows.length - 2;
                 
+                /*Loops through the table skipping the header and the hidden "No Results" row*/
                 for (var i=2; i<rows.length; i++) {
+                    /*Stores each individual row*/
                     row=rows[i];
+                    /*Stores the values of each given column from the current row*/
                     year=row.cells[0].textContent.trim();
                     team=row.cells[1].textContent.trim();
                     league=row.cells[7].textContent.trim();
                     snout=row.cells[9].textContent.trim();
     
+                    /*Compares the values in the dropdown to the values in each row*/
                     if ((filter_year==="all" && filter_team==="all" && filter_league==="all" && filter_snout==="all")
                         || (year===filter_year && filter_team==="all" && filter_league==="all" && filter_snout==="all")
                         || (filter_year==="all" && team===filter_team && filter_league==="all" && filter_snout==="all")
@@ -130,20 +141,27 @@
                         || (year===filter_year && team===filter_team && filter_league==="all" && snout===filter_snout)
                         || (year===filter_year && filter_team==="all" && league===filter_league && snout===filter_snout)
                         || (filter_year==="all" && team===filter_team && league===filter_league && snout===filter_snout)
-                        || (year===filter_year && team===filter_team && league===filter_league && snout===filter_snout)) {
+                        || (year===filter_year && team===filter_team && league===filter_league && snout===filter_snout))
+                    {
+                        /*If the selected dropdown values match a row, then display that row*/
                         row.style.display="";
                     }
                     else {
+                        /*If the selected dropdown values do not match a row, then do not display that row*/
                         row.style.display = "none";
+                        /*Increase the number of hidden rows by 1*/
                         rowshidden +=1;
                     }
                 }
 
+                /*Compare the number of hidden rows to the number of total rows*/
                 if (rowshidden === rowcount) {
+                    /*If all rows of the table are hidden, display "No Results" row*/
                     document.getElementById('noresults').style.display = "";
                 }
 
                 else {
+                    /*If any rows of the table are shown, do not display "No Results" row*/
                     document.getElementById('noresults').style.display = "none";
                 }
             }
@@ -338,7 +356,9 @@
             </tbody>
         </table>
 
-        <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+        <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js">
+            /*Allows table headers to be clicked on to sort table columns by value*/
+        </script>
 
         <div class="credit">
             *The team information was provided by <a href="https://www.baseball-reference.com/bullpen/Baseball_statistics" target="_blank">Baseball Reference</a> and <a href="https://www.stevetheump.com/Payrolls.htm" target="_blank">Steve O's Baseball Umpire Resources</a><br>

@@ -202,22 +202,35 @@
         </table>
 
         <script>
+            /*Function used to filter the table by year using a dropdown*/
             function filterTable(){
+                /*Stores the header column that contains the year*/
                 var dropdown=document.getElementById("year");
+
+                /*Stores the value selected in the dropdown*/
                 var selectedValue=dropdown.value;
+                
+                /*Stores the html table*/
                 var table=document.getElementById("myTable");
+                /*Stores all of the rows in the table*/
                 var rows=table.getElementsByTagName("tr");
 
+                /*Loops through the table skipping the header*/
                 for(var i=1;i<rows.length;i++)
                 {
+                    /*Stores each individual row*/
                     var row=rows[i];
+                    /*Stores the value of the year from the current row*/
                     var year=row.cells[0].textContent.trim();
 
+                    /*Compares the value of the year based on the the value in the dropdown*/
                     if(selectedValue==="all" || year===selectedValue)
                     {
+                        /*If the selected year matches a row, then display that row*/
                         row.style.display="";
                     }
-                    else{
+                    else {
+                        /*If the selected year does not match a row, then do not display that row*/
                         row.style.display="none";
                     }
                 }
