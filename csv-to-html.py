@@ -17,7 +17,8 @@ t = PrettyTable([l1[0],l1[1],l1[2],l1[3],l1[4],l1[5],l1[6],l1[7],l1[8],l1[9],l1[
 # Adding the table data
 for i in range(1, len(a)) :
     t.add_row(a[i].split(','))
- 
+
+# Get string representation of table
 code = t.get_html_string()
 
 # Open a new HTML file to write into
