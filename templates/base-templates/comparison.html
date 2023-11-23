@@ -33,22 +33,22 @@
             <tbody>
                 <tr>
                     <td>Award</td>
-                    <td>Batting Champion</td>
+                    <td>Batting Champion and Batting Statistics</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>Award</td>
-                    <td>Cy Young Award</td>
+                    <td>Cy Young Award and Pitching Statistics</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>Award</td>
-                    <td>Hank Aaron Award</td>
+                    <td>Hank Aaron Award and Batting Statistics</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>Award</td>
-                    <td>MVP Award</td>
+                    <td>MVP Award and Player Statistics</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -63,7 +63,7 @@
                 </tr>
                 <tr>
                     <td>Award</td>
-                    <td>Pitching ERA Champion</td>
+                    <td>Pitching ERA Champion and Pitching Statistics</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -104,10 +104,10 @@
                     /*Stores each individual row*/
                     var row=rows[i];
                     /*Stores the value of the statistic type from the current row*/
-                    var year=row.cells[0].textContent.trim();
+                    var statType=row.cells[0].textContent.trim();
 
                     /*Compares the value of the statistic type based on the the value in the dropdown*/
-                    if(selectedValue==="all" || year===selectedValue)
+                    if(selectedValue==="all" || statType===selectedValue)
                     {
                         /*If the selected statistic type matches a row, then display that row*/
                         row.style.display="";
