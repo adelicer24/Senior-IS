@@ -13,68 +13,112 @@
     </h1>
 
     <div class="main">
-        Below is a list of statistic comparisons and what can be made of them
-        <div class="comparisons">
-            <h2>
-                Award Comparisons
-            </h2>
-            <table>
-                <thead>
-                    <tr><th style="width: 30%;" class="comparison">Comparison</th><th class="insight">Insight</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td></td><td></td></tr>
-                </tbody>
-            </table>
-
-            <h2>
-                Batting Statistic Comparisons
-            </h2>
-            <table>
-                <thead>
-                    <tr><th style="width: 30%;" class="comparison">Comparison</th><th class="insight">Insight</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td></td><td></td></tr>
-                </tbody>
-            </table>
-
-            <h2>
-                Fielding Statistic Comparisons
-            </h2>
-            <table>
-                <thead>
-                    <tr><th style="width: 30%;" class="comparison">Comparison</th><th class="insight">Insight</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td></td><td></td></tr>
-                </tbody>
-            </table>
-
-            <h2>
-                Pitching Statistic Comparisons
-            </h2>
-            <table>
-                <thead>
-                    <tr><th style="width: 30%;" class="comparison">Comparison</th><th class="insight">Insight</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td></td><td></td></tr>
-                </tbody>
-            </table>
-
-            <h2>
-                Team Statistic Comparisons
-            </h2>
-            <table>
-                <thead>
-                    <tr><th style="width: 30%;" class="comparison">Comparison</th><th class="insight">Insight</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td></td><td></td></tr>
-                </tbody>
-            </table>
+        <div class="filter">
+            <label class="caption" for="statType">Filter By Statistic Type: </label>
+            
+            <select class="dropdown" id="statType" onchange="filterTable()">
+                <option value="all">All</option>
+                <option value="Award">Award</option>
+                <option value="Batting">Batting</option>
+                <option value="Fielding">Fielding</option>
+                <option value="Pitching">Pitching</option>
+                <option value="Team">Team</option>
+            </select>
         </div>
+
+        <table id="myTable">
+            <thead>
+                <tr><th style="width: 15%;" class="type">Statistic Type</th><th style="width: 25%;" class="comparison">Comparison</th><th class="insight">Insight</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Award</td>
+                    <td>Batting Champion</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Award</td>
+                    <td>Cy Young Award</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Award</td>
+                    <td>Hank Aaron Award</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Award</td>
+                    <td>MVP Award</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Team</td>
+                    <td>Payroll and Season Outcome</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Team</td>
+                    <td>Payroll and Wins</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Award</td>
+                    <td>Pitching ERA Champion</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Batting</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Fielding</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Pitching</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script>
+            /*Function used to filter the table by statistic type using a dropdown*/
+            function filterTable(){
+                /*Stores the header column that contains the statistic type*/
+                var dropdown=document.getElementById("statType");
+
+                /*Stores the value selected in the dropdown*/
+                var selectedValue=dropdown.value;
+                
+                /*Stores the html table*/
+                var table=document.getElementById("myTable");
+                /*Stores all of the rows in the table*/
+                var rows=table.getElementsByTagName("tr");
+
+                /*Loops through the table skipping the header*/
+                for(var i=1;i<rows.length;i++)
+                {
+                    /*Stores each individual row*/
+                    var row=rows[i];
+                    /*Stores the value of the statistic type from the current row*/
+                    var year=row.cells[0].textContent.trim();
+
+                    /*Compares the value of the statistic type based on the the value in the dropdown*/
+                    if(selectedValue==="all" || year===selectedValue)
+                    {
+                        /*If the selected statistic type matches a row, then display that row*/
+                        row.style.display="";
+                    }
+                    else {
+                        /*If the selected statistic type does not match a row, then do not display that row*/
+                        row.style.display="none";
+                    }
+                }
+            }
+        </script>
     </div>
 
     <div class="footer">
