@@ -2,7 +2,7 @@
 from prettytable import PrettyTable
 
 # Open given csv file
-a = open("mlb_data/.csv", 'r')
+a = open("my_file.csv", 'r')
  
 # Read the given csv file
 a = a.readlines()
